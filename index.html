@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="./assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    </body>
+    <title>Star Wars | Narth Vaders Question Raiders</title>
+</head>
+
+<body>
+    
+    <!-----------------------Page Heading----------------------->
+
+    <header class="container page-heading" id="page-header">
+        <h1>Narth Vaders<br> Question Raiders</h1>
+        <h2>Star Wars Edition</h2>
+    </header>
+
+    <!-----------------------Background Video----------------------->
+
+    <video class="large-video-bg" id="background-video" autoplay loop muted>
+        <source src="./assets/Videos/stars-in-space-vid-60fps.mp4" type="video/mp4">
+    </video>
+
+    <!-----------------------Starting Screen----------------------->
+
+    <div class="container start-screen" id="starting-screen">
+        <h2 id="start-title">Test Your Star Wars Knowledge</h2>
+        <p id="start-text">
+            A trial of star wars based knowledge questions to test your connection with the force!
+            <br>
+            <br>
+            Have you got what it takes to become a true Jedi Knight?
+        </p>
+        <button type="button" id="start-btn" onClick="startGame()">Begin The Trials</button>
+    </div>
+
+    <!-----------------------Questions----------------------->
+
+    <div class="container questions" id="question-screen">
+    </div>
+
+    <!-----------------------Next Button----------------------->
+
+    <div class="container btn-next">
+        <button type="button" id="next-btn">Next</button>
+    </div>
+
+    <!-----------------------Results Modal----------------------->
+
+    <div class="container results" id="result-panel">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary btn-finish" id="finish-btn" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop">
+            Finish
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Completed The Questions, You Have!</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h2 id="player-result">You scored${playerResult}</h2>
+                        <br>
+                        <p id="play-again-text">Would you like to play again?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" id="close-modal"
+                            data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="play-again-btn">Play Again</button>
+                    </div>
+                </div>
+            </div>
+
+</body>
+
+</html>
