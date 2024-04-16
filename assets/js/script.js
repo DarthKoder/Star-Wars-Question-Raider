@@ -2,13 +2,13 @@
 
 let questions = [
     {
-       id: 1,
-       title: "What planet is Obi-Wan Kenobi from?",
-       answerA: "Tatooine",
-       answerB: "Stewjon",
-       answerC: "Degobah",
-       answerD: "Coruscant",
-       correctAnswer: "answerB"
+        id: 1,
+        title: "What planet is Obi-Wan Kenobi from?",
+        answerA: "Tatooine",
+        answerB: "Stewjon",
+        answerC: "Degobah",
+        answerD: "Coruscant",
+        correctAnswer: "answerB"
     },
 
     {
@@ -20,7 +20,7 @@ let questions = [
         answerD: "Rosario Dawson",
         correctAnswer: "answerC"
     },
-     
+
     {
         id: 3,
         title: "What planet is Padme Amidala from?",
@@ -210,7 +210,50 @@ let questions = [
         answerD: "Mustafar",
         correctAnswer: "answerA"
     },
- ]
+];
 
 /*------------------------------ The Game-----------------------------*/
 
+let usedQuestions = [];
+let currentQuestionIndex = 0;
+let playerScore = 0;
+
+/*------------------------------ The Start-----------------------------*/
+
+document.getElementById("start-btn").addEventListener("click", function () {
+    startGame();
+});
+
+function startGame() {
+    document.getElementById("starting-screen").style.display = "none";
+    document.getElementById("question-screen").style.display = "block";
+    displayNextQuestion();
+};
+
+/*--------------- Question Randomizer / Options / User Answer / Check Answer ---------------*/
+
+function displayNextQuestion() {
+    if (currentQuestionIndex >= 10) {
+        // Display results modal when all questions are answered
+        displayResults();
+        return;
+    };
+
+    let randomIndex;
+    do {
+        randomIndex = Math.floor(Math.random() * questions.length);
+    } while (usedQuestions.includes(randomIndex));
+    usedQuestions.push(randomIndex);
+
+    let question = questions[randomIndex];
+    let questionScreen = document.getElementById("question-screen");
+    questionScreen.innerHTML = `
+        <div class="container question">
+            <h3 id="question-title">${question.title}</h3>
+            <button class="col-6 question-option" data-answer="answerA" active= "true">${question.answerA}</button>
+            <button class="col-6 question-option" data-answer="answerB" active= "true">${question.answerB}</button>
+            <button class="col-6 question-option" data-answer="answerC" active= "true">${question.answerC}</button>
+            <button class="col-6 question-option" data-answer="answerD" active= "true">${question.answerD}</button>
+        </div>
+    `;
+}
