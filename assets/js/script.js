@@ -224,6 +224,7 @@ document.getElementById("start-btn").addEventListener("click", function () {
     startGame();
 });
 
+// This will hide the start screen and then display the question screen once start button is clicked. 
 function startGame() {
     document.getElementById("starting-screen").style.display = "none";
     document.getElementById("question-screen").style.display = "block";
@@ -232,13 +233,15 @@ function startGame() {
 
 /*--------------- Question Randomizer / Options / User Answer / Check Answer ---------------*/
 
+// This function generates our 10 questions and once the 10th question has been answered, we display a finish button. 
 function displayNextQuestion() {
     if (currentQuestionIndex >= 10) {
-        // Display results modal when all questions are answered
-        displayResults();
+        document.getElementById("next-btn").style.display = "none";
+        document.getElementById("finish-btn").style.display = "block";
         return;
     };
 
+    // Creating the randon question generator using the random index and Math..floor/random
     let randomIndex;
     do {
         randomIndex = Math.floor(Math.random() * questions.length);
@@ -247,13 +250,61 @@ function displayNextQuestion() {
 
     let question = questions[randomIndex];
     let questionScreen = document.getElementById("question-screen");
+    // This will create the HTML for the questions & answers once generated from randomizer
     questionScreen.innerHTML = `
         <div class="container question">
             <h3 id="question-title">${question.title}</h3>
-            <button class="col-6 question-option" data-answer="answerA" active= "true">${question.answerA}</button>
-            <button class="col-6 question-option" data-answer="answerB" active= "true">${question.answerB}</button>
-            <button class="col-6 question-option" data-answer="answerC" active= "true">${question.answerC}</button>
-            <button class="col-6 question-option" data-answer="answerD" active= "true">${question.answerD}</button>
+            <button class="col-6 question-option" data-answer="answerA">${question.answerA}</button>
+            <button class="col-6 question-option" data-answer="answerB">${question.answerB}</button>
+            <button class="col-6 question-option" data-answer="answerC">${question.answerC}</button>
+            <button class="col-6 question-option" data-answer="answerD">${question.answerD}</button>
         </div>
     `;
+    // Thiss will add event listeners to answer buttons to be enable/disabled after userAnswer.
+    let answerButtons = document.getElementsByClassName("question-option");
+    for (let button of answerButtons) {
+        button.addEventListener("click", function (event) {
+
+            // This will recieve the users answer
+            let userAnswer = event.target.getAttribute("data-answer");
+
+            // Check the answer 
+            checkAnswer(userAnswer);
+
+            // Then disable all question buttons
+            disableAnswerButtons(answerButtons);
+        });
+    };
+    // Disabling the buttons
+    function disableAnswerButtons(answerButtons) {
+        for (let button of answerButtons) {
+            button.disabled = true;
+        }
+    }
+
+    function checkAnswer(userAnswer) {
+        let question = questions[usedQuestions[currentQuestionIndex]];
+        if (userAnswer === question.correctAnswer) {
+            playerScore++;
+            document.querySelector(`button[data-answer="${question.correctAnswer}"]`).style.backgroundColor = "green";
+        } else {
+            document.querySelector(`button[data-answer="${userAnswer}"]`).style.backgroundColor = "red";
+        }
+        document.getElementById("next-btn").style.display = "block";
+    };
+
+    /*------------------------------Next Button-----------------------------*/
+
+    document.getElementById("next-btn").addEventListener("click", function () {
+        // This will enable the buttons again before displaying the next question
+        enableAnswerButtons(document.getElementsByClassName("question-option"));
+        currentQuestionIndex++;
+        displayNextQuestion();
+    });
+
+    /*------------------------------Finish Button-----------------------------*/
+
+    document.getElementById("finish-btn").addEventListener("click", function () {
+        displayResults()
+    });
 }
