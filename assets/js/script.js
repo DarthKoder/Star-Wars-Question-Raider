@@ -53,7 +53,7 @@ let questions = [
 
     {
         id: 6,
-        title: "What is the name of Boba Fetts's father?",
+        title: "What is the name of Boba Fett's father?",
         answerA: "'Captain' Rex Fett",
         answerB: "Boba Fett Senior",
         answerC: "Cassus Fett",
@@ -222,6 +222,7 @@ let playerScore = 0;
 
 document.getElementById("start-btn").addEventListener("click", function () {
     startGame();
+    console.log("Game Started!");
 });
 
 // This will hide the start screen and then display the question screen once start button is clicked. 
@@ -230,6 +231,7 @@ function startGame() {
     document.getElementById("question-screen").style.display = "block";
     displayNextQuestion();
 };
+
 
 /*--------------- Question Randomizer / Options / User Answer / Check Answer ---------------*/
 
@@ -282,6 +284,12 @@ function displayNextQuestion() {
         }
     }
 
+    function enableAnswerButtons(answerButtons) {
+        for (let button of answerButtons) {
+            button.disabled = false;
+        }
+    }
+
     function checkAnswer(userAnswer) {
         let question = questions[usedQuestions[currentQuestionIndex]];
         if (userAnswer === question.correctAnswer) {
@@ -292,19 +300,19 @@ function displayNextQuestion() {
         }
         document.getElementById("next-btn").style.display = "block";
     };
+};
+/*------------------------------Next Button-----------------------------*/
+// This is to enabnle the button again and produce the next question once the button is clicked
+document.getElementById("next-btn").addEventListener("click", function () {
+    displayNextQuestion();
+    enableAnswerButtons(document.getElementsByClassName("question-option"));
+    currentQuestionIndex++;
+    console.log("it clicked");
+});
 
-    /*------------------------------Next Button-----------------------------*/
+/*------------------------------Finish Button-----------------------------*/
 
-    document.getElementById("next-btn").addEventListener("click", function () {
-        // This will enable the buttons again before displaying the next question
-        enableAnswerButtons(document.getElementsByClassName("question-option"));
-        currentQuestionIndex++;
-        displayNextQuestion();
-    });
+document.getElementById("finish-btn").addEventListener("click", function () {
+    displayResults()
+});
 
-    /*------------------------------Finish Button-----------------------------*/
-
-    document.getElementById("finish-btn").addEventListener("click", function () {
-        displayResults()
-    });
-}
