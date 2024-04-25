@@ -94,7 +94,7 @@ let questions = [
     {
         id: 10,
         title: "What species is Greedo?",
-        answerA: "Rogian",
+        answerA: "Rodian",
         answerB: "Twi'lek",
         answerC: "Neimoidian",
         answerD: "Trandoshan",
@@ -221,15 +221,15 @@ let playerScore = 0;
 /*------------------------------ The Start-----------------------------*/
 
 document.getElementById("start-btn").addEventListener("click", function () {
-    startGame();
     console.log("Game Started!");
+    startGame();
+    displayNextQuestion();
 });
 
 // This will hide the start screen and then display the question screen once start button is clicked. 
 function startGame() {
     document.getElementById("starting-screen").style.display = "none";
     document.getElementById("question-screen").style.display = "block";
-    displayNextQuestion();
 };
 
 
@@ -237,9 +237,9 @@ function startGame() {
 
 // This function generates our 10 questions and once the 10th question has been answered, we display a finish button. 
 function displayNextQuestion() {
-    if (currentQuestionIndex >= 10) {
-        document.getElementById("next-btn").style.display = "none";
-        document.getElementById("finish-btn").style.display = "block";
+    if (usedQuestions.length >= 10) {
+        document.getElementById("finish-btn").style.display = "block"
+        document.getElementById("next-btn").style.display = "none"
         return;
     };
 
@@ -249,6 +249,8 @@ function displayNextQuestion() {
         randomIndex = Math.floor(Math.random() * questions.length);
     } while (usedQuestions.includes(randomIndex));
     usedQuestions.push(randomIndex);
+
+    console.log("Number of questions generated so far", usedQuestions.length);
 
     let question = questions[randomIndex];
     let questionScreen = document.getElementById("question-screen");
@@ -262,6 +264,7 @@ function displayNextQuestion() {
             <button class="col-6 question-option" data-answer="answerD">${question.answerD}</button>
         </div>
     `;
+
     // Thiss will add event listeners to answer buttons to be enable/disabled after userAnswer.
     let answerButtons = document.getElementsByClassName("question-option");
     for (let button of answerButtons) {
@@ -269,45 +272,52 @@ function displayNextQuestion() {
 
             // This will recieve the users answer
             let userAnswer = event.target.getAttribute("data-answer");
+            // This will get correct answer from Questions object
+            let correctAnswer = question.correctAnswer;
 
             // Check the answer 
-            checkAnswer(userAnswer);
+            checkAnswer(userAnswer, correctAnswer);
 
             // Then disable all question buttons
             disableAnswerButtons(answerButtons);
+
+            // Shows next button after user answers
+            document.getElementById("next-btn").style.display = "block";
         });
     };
-    // Disabling the buttons
-    function disableAnswerButtons(answerButtons) {
-        for (let button of answerButtons) {
-            button.disabled = true;
-        }
-    }
-
-    function enableAnswerButtons(answerButtons) {
-        for (let button of answerButtons) {
-            button.disabled = false;
-        }
-    }
-
-    function checkAnswer(userAnswer) {
-        let question = questions[usedQuestions[currentQuestionIndex]];
-        if (userAnswer === question.correctAnswer) {
-            playerScore++;
-            document.querySelector(`button[data-answer="${question.correctAnswer}"]`).style.backgroundColor = "green";
-        } else {
-            document.querySelector(`button[data-answer="${userAnswer}"]`).style.backgroundColor = "red";
-        }
-        document.getElementById("next-btn").style.display = "block";
-    };
 };
+// Disabling the answer buttons
+function disableAnswerButtons(answerButtons) {
+    for (let button of answerButtons) {
+        button.disabled = true;
+    }
+}
+
+function enableAnswerButtons(answerButtons) {
+    for (let button of answerButtons) {
+        button.disabled = false;
+    }
+}
+
+function checkAnswer(userAnswer, correctAnswer) {
+    if (userAnswer === correctAnswer) {
+        playerScore++;
+        document.querySelector(`button[data-answer="${userAnswer}"]`).style.backgroundColor = "green";
+    } else {
+        document.querySelector(`button[data-answer="${userAnswer}"]`).style.backgroundColor = "red";
+        document.querySelector(`button[data-answer="${correctAnswer}"]`).style.backgroundColor = "green";
+    }
+};
+
 /*------------------------------Next Button-----------------------------*/
 // This is to enabnle the button again and produce the next question once the button is clicked
 document.getElementById("next-btn").addEventListener("click", function () {
     displayNextQuestion();
     enableAnswerButtons(document.getElementsByClassName("question-option"));
     currentQuestionIndex++;
-    console.log("it clicked");
+    console.log("Next!");
+    // To hide the button after displaying next question 
+    document.getElementById("next-btn").style.display = "none";
 });
 
 /*------------------------------Finish Button-----------------------------*/
