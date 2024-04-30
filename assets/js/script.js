@@ -237,14 +237,6 @@ function startGame() {
 
 // This function generates our 10 questions and once the 10th question has been answered, we display a finish button. 
 function displayNextQuestion() {
-    if (usedQuestions.length == 10) {
-        document.getElementById("next-btn").style.display = "none"
-        document.getElementById("finish-btn").style.display = "block"
-        return;
-    };
-
-
-
     // Creating the randon question generator using the random index and Math..floor/random
     let randomIndex;
     do {
@@ -284,7 +276,12 @@ function displayNextQuestion() {
             disableAnswerButtons(answerButtons);
 
             // Shows next button after user answers
-            document.getElementById("next-btn").style.display = "block";
+            if (usedQuestions.length <= 9) {
+                document.getElementById("next-btn").style.display = "block";
+            } else {
+                document.getElementById("next-btn").style.display = "none"
+                document.getElementById("finish-btn").style.display = "block"
+            }
         });
     };
 };
