@@ -237,11 +237,13 @@ function startGame() {
 
 // This function generates our 10 questions and once the 10th question has been answered, we display a finish button. 
 function displayNextQuestion() {
-    if (usedQuestions.length >= 10) {
-        document.getElementById("finish-btn").style.display = "block"
+    if (usedQuestions.length == 10) {
         document.getElementById("next-btn").style.display = "none"
+        document.getElementById("finish-btn").style.display = "block"
         return;
     };
+
+
 
     // Creating the randon question generator using the random index and Math..floor/random
     let randomIndex;
@@ -326,3 +328,20 @@ document.getElementById("finish-btn").addEventListener("click", function () {
     displayResults()
 });
 
+/*------------------------------Results Screen-----------------------------*/
+
+function displayResults() {
+    let resultModal = new bootstrap.Modal(document.getElementById("resultModal"));
+    let modalContent = document.getElementById("player-result");
+    modalContent.textContent = `You scored ${playerScore} out of 10.`;
+    resultModal.show();
+
+    document.getElementById("close-modal").addEventListener("click", function () {
+        document.getElementById("resultModal").style.display = "none";
+    });
+
+    document.getElementById("play-again-btn").addEventListener("click", function () {
+        document.getElementById("resultModal").style.display = "none";
+        gameReset();
+    });
+};
