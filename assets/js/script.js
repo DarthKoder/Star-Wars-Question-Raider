@@ -275,7 +275,7 @@ function displayNextQuestion() {
             // Then disable all question buttons
             disableAnswerButtons(answerButtons);
 
-            // Shows next button after user answers
+            // Shows next button after user answers 9 question and shows the finish button after the 10th
             if (usedQuestions.length <= 9) {
                 document.getElementById("next-btn").style.display = "block";
             } else {
@@ -326,19 +326,52 @@ document.getElementById("finish-btn").addEventListener("click", function () {
 });
 
 /*------------------------------Results Screen-----------------------------*/
-
+// Bring up bootstrap modal and display users results
 function displayResults() {
     let resultModal = new bootstrap.Modal(document.getElementById("resultModal"));
     let modalContent = document.getElementById("player-result");
     modalContent.textContent = `You scored ${playerScore} out of 10.`;
     resultModal.show();
 
+    // Close buttin will close down the modal screen
     document.getElementById("close-modal").addEventListener("click", function () {
         document.getElementById("resultModal").style.display = "none";
     });
 
+    // Play agian button to call the restartGame() function
     document.getElementById("play-again-btn").addEventListener("click", function () {
         document.getElementById("resultModal").style.display = "none";
-        gameReset();
+        restartGame();
     });
 };
+/*------------------------------Restart Game-----------------------------*/
+function restartGame() {
+    // Reset all scores and variables
+    usedQuestions = [];
+    currentQuestionIndex = 0;
+    playerScore = 0;
+
+    // Reset answer button styles
+    let answerButtons = document.getElementsByClassName("question-option");
+    for (let button of answerButtons) {
+        // Reset background color as backdrop was still appearing.
+        button.style.backgroundColor = "";
+    }
+
+    // Enable answer buttons for the next game
+    enableAnswerButtons(answerButtons);
+
+    // This is to hide finish button and next button
+    document.getElementById("finish-btn").style.display = "none";
+    document.getElementById("next-btn").style.display = "none";
+
+    // This is to ensure the modal is hidden 
+    let resultModal = bootstrap.Modal.getInstance(document.getElementById("resultModal"));
+    if (resultModal) {
+        resultModal.hide();
+    }
+
+    // Restart the game by displaying the starting screen and hiding the question screen
+    document.getElementById("question-screen").style.display = "none";
+    document.getElementById("starting-screen").style.display = "block";
+}
