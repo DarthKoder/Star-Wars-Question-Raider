@@ -142,6 +142,82 @@ body {
     border-radius: 20px;
 }
 
+/*--------------Results Modal---------------*/
+
+:root {
+    --bs-body-bg: #000;
+}
+.modal-dialog{
+    border: 2px solid #ffbf50;
+    border-radius: 10px;
+}
+
+.modal-header {
+    background-color: #000000;
+}
+
+#modal-heading {
+    font-family: "Orbitron", sans-serif;
+    font-weight: 700;
+    color: #ffbf50;
+    margin: auto;
+}
+
+.modal-body {
+    background-color: #fafafa;
+}
+
+#player-result {
+    text-align: center;
+    color: #a80000;
+    font-family: "Orbitron", sans-serif;
+}
+
+#score-message {
+    text-align: center;
+    color: #000000;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+#play-again-text {
+    text-align: center;
+    color: green;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.modal-footer {
+    background-color: #000000;
+}
+
+#close-modal {
+    font-family: "Orbitron", sans-serif;
+    font-size: 15px;
+    left: 60%;
+    padding: 10px;
+    margin: 0 10px;
+    color: #dddddd;
+    background-color: #000000;
+    border: solid 2px #a80000;
+    border-radius: 10px;
+}
+
+#play-again-btn {
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 15px;
+    left: 60%;
+    padding: 10px;
+    margin: 0;
+    color: #dddddd;
+    background-color: #000000;
+    border: solid 2px #a80000;
+    border-radius: 10px;
+}
+
 /*--------------------------------MEDIA QUERIES---------------------------------*/
 
 @media (min-width: 576px) {

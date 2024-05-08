@@ -226,6 +226,20 @@ document.getElementById("start-btn").addEventListener("click", function () {
     displayNextQuestion();
 });
 
+const startButton = document.querySelector('#start-btn');
+
+// Add a mouseover event listener to start button
+startButton.addEventListener('mouseover', () => {
+    // Change the start button's background color
+    startButton.style.backgroundColor = '#a80000';
+});
+
+// Add a mouseout event listener to start button to reverse css change
+startButton.addEventListener('mouseout', () => {
+    // Change the start button's background color back to its original color
+    startButton.style.backgroundColor = '';
+});
+
 // This will hide the start screen and then display the question screen once start button is clicked. 
 function startGame() {
     document.getElementById("starting-screen").style.display = "none";
@@ -258,6 +272,20 @@ function displayNextQuestion() {
             <button class="col-6 question-option" data-answer="answerD">${question.answerD}</button>
         </div>
     `;
+
+    const answerButton = document.querySelectorALL('.question-option');
+
+    // Add a mouseover listener to answer button
+    answerButton.addEventListener('mouseover', () => {
+        // Change the answer button's border color
+        answerButton.style.border = '2px solid grey';
+    });
+
+    // Add a mouseout event listener to answer button to reverse css change
+    answerButton.addEventListener('mouseout', () => {
+        // Change the answer button's border color back to its original color
+        answerButton.style.border = '';
+    });
 
     // Thiss will add event listeners to answer buttons to be enable/disabled after userAnswer.
     let answerButtons = document.getElementsByClassName("question-option");
@@ -319,11 +347,39 @@ document.getElementById("next-btn").addEventListener("click", function () {
     document.getElementById("next-btn").style.display = "none";
 });
 
+const nextButton = document.querySelector('#next-btn');
+
+// Add a mouseover event listener to next button
+nextButton.addEventListener('mouseover', () => {
+    // Change the next button's background color
+    nextButton.style.backgroundColor = '#a80000';
+});
+
+// Add a mouseout event listener to next button to reverse css change
+nextButton.addEventListener('mouseout', () => {
+    // Change the button's background color back to its original color
+    nextButton.style.backgroundColor = '';
+});
+
 /*------------------------------Finish Button-----------------------------*/
 
 document.getElementById("finish-btn").addEventListener("click", function () {
     displayResults()
 });
+
+const finishButton = document.querySelector('#finish-btn');
+
+    // Add a mouseover listener to finish button
+    finishButton.addEventListener('mouseover', () => {
+        // Change the finish button's background color
+        finishButton.style.backgroundColor = 'green';
+    });
+
+    // Add a mouseout event listener to finish button to reverse css change
+    finishButton.addEventListener('mouseout', () => {
+        // Change the finish button's background color back to its original color
+        finishButton.style.backgroundColor = '';
+    });
 
 /*------------------------------Results Screen-----------------------------*/
 // Bring up bootstrap modal and display users results
@@ -331,17 +387,60 @@ function displayResults() {
     let resultModal = new bootstrap.Modal(document.getElementById("resultModal"));
     let modalContent = document.getElementById("player-result");
     modalContent.textContent = `You scored ${playerScore} out of 10.`;
+
+    // Different messages to appear depending on score
+    let scoreMessage = document.getElementById("score-message");
+    if (playerScore <= 3) {
+        scoreMessage.textContent = `One with the force, you are not. A lot to learn, you have`
+    };
+    if (playerScore >= 4 && playerScore <= 7) {
+        scoreMessage.textContent = `Not bad.. not great. Your path, you must decide.`
+    };
+    if (playerScore >= 8) {
+        scoreMessage.textContent = `Powerful you have become! Always pass on what you have learned, you Jedi! `
+    }
     resultModal.show();
 
-    // Close buttin will close down the modal screen
+    /*-----------------------Close Button---------------------*/
+    // Close button will close down the modal screen
     document.getElementById("close-modal").addEventListener("click", function () {
         document.getElementById("resultModal").style.display = "none";
     });
+
+    const closeButton = document.querySelector('#close-modal');
+
+    // Add a mouseover listener to close button
+    closeButton.addEventListener('mouseover', () => {
+        // Change the close button's background color
+        closeButton.style.backgroundColor = '#a80000';
+    });
+
+    // Add a mouseout event listener to close button to reverse css change
+    closeButton.addEventListener('mouseout', () => {
+        // Change the close button's background color back to its original color
+        closeButton.style.backgroundColor = '';
+    });
+
+    /*-----------------------Play Again Button---------------------*/
 
     // Play agian button to call the restartGame() function
     document.getElementById("play-again-btn").addEventListener("click", function () {
         document.getElementById("resultModal").style.display = "none";
         restartGame();
+    });
+
+    const playAgainButton = document.querySelector('#play-again-btn');
+
+    // Add a mouseover listener to play again button
+    playAgainButton.addEventListener('mouseover', () => {
+        // Change the play again button's background color
+        playAgainButton.style.backgroundColor = 'green';
+    });
+
+    // Add a mouseout event listener to play again button to reverse css change
+    playAgainButton.addEventListener('mouseout', () => {
+        // Change the play again button's background color back to its original color
+        playAgainButton.style.backgroundColor = '';
     });
 };
 /*------------------------------Restart Game-----------------------------*/
