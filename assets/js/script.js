@@ -3,7 +3,7 @@
 let questions = [
     {
         id: 1,
-        title: "What planet is Obi-Wan Kenobi from?",
+        title: "What planet is obi-Wan Kenobi from?",
         answerA: "Tatooine",
         answerB: "Stewjon",
         answerC: "Degobah",
@@ -153,7 +153,7 @@ let questions = [
 
     {
         id: 16,
-        title: "When Obi-Wan performed the blood test on Anakin, how high was the Midi-chlorian count?",
+        title: "When obi-Wan performed the blood test on Anakin, how high was the Midi-chlorian count?",
         answerA: "More than 20,000",
         answerB: "More than 50,000",
         answerC: "More than 10,000",
@@ -163,7 +163,7 @@ let questions = [
 
     {
         id: 17,
-        title: "How many lightsabers does General Grievous wield in his fight with Obi-Wan on Utapau?",
+        title: "How many lightsabers does General Grievous wield in his fight with obi-Wan on Utapau?",
         answerA: "2",
         answerB: "3",
         answerC: "4",
@@ -273,20 +273,6 @@ function displayNextQuestion() {
         </div>
     `;
 
-    const answerButton = document.querySelectorALL('.question-option');
-
-    // Add a mouseover listener to answer button
-    answerButton.addEventListener('mouseover', () => {
-        // Change the answer button's border color
-        answerButton.style.border = '2px solid grey';
-    });
-
-    // Add a mouseout event listener to answer button to reverse css change
-    answerButton.addEventListener('mouseout', () => {
-        // Change the answer button's border color back to its original color
-        answerButton.style.border = '';
-    });
-
     // Thiss will add event listeners to answer buttons to be enable/disabled after userAnswer.
     let answerButtons = document.getElementsByClassName("question-option");
     for (let button of answerButtons) {
@@ -307,8 +293,8 @@ function displayNextQuestion() {
             if (usedQuestions.length <= 9) {
                 document.getElementById("next-btn").style.display = "block";
             } else {
-                document.getElementById("next-btn").style.display = "none"
-                document.getElementById("finish-btn").style.display = "block"
+                document.getElementById("next-btn").style.display = "none";
+                document.getElementById("finish-btn").style.display = "block";
             }
         });
     };
@@ -372,7 +358,7 @@ const finishButton = document.querySelector('#finish-btn');
     // Add a mouseover listener to finish button
     finishButton.addEventListener('mouseover', () => {
         // Change the finish button's background color
-        finishButton.style.backgroundColor = 'green';
+        finishButton.style.backgroundColor = '#a80000';
     });
 
     // Add a mouseout event listener to finish button to reverse css change

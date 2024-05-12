@@ -196,6 +196,7 @@ body {
 #close-modal {
     font-family: "Orbitron", sans-serif;
     font-size: 15px;
+    font-weight: 500;
     left: 60%;
     padding: 10px;
     margin: 0 10px;
@@ -206,9 +207,9 @@ body {
 }
 
 #play-again-btn {
-
     font-family: "Orbitron", sans-serif;
     font-size: 15px;
+    font-weight: 500;
     left: 60%;
     padding: 10px;
     margin: 0;
