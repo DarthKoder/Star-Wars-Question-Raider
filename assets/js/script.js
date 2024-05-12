@@ -221,7 +221,6 @@ let playerScore = 0;
 /*------------------------------ The Start-----------------------------*/
 
 document.getElementById("start-btn").addEventListener("click", function () {
-    console.log("Game Started!");
     startGame();
     displayNextQuestion();
 });
@@ -257,8 +256,6 @@ function displayNextQuestion() {
         randomIndex = Math.floor(Math.random() * questions.length);
     } while (usedQuestions.includes(randomIndex));
     usedQuestions.push(randomIndex);
-
-    console.log("Number of questions generated so far", usedQuestions.length);
 
     let question = questions[randomIndex];
     let questionScreen = document.getElementById("question-screen");
@@ -328,7 +325,6 @@ document.getElementById("next-btn").addEventListener("click", function () {
     displayNextQuestion();
     enableAnswerButtons(document.getElementsByClassName("question-option"));
     currentQuestionIndex++;
-    console.log("Next!");
     // To hide the button after displaying next question 
     document.getElementById("next-btn").style.display = "none";
 });
