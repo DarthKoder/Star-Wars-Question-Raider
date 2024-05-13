@@ -108,7 +108,7 @@ To help inspire the user and bring them into the Star Wars universe for their ex
     * The multiple choice questions each appear in an oblong box with a white background with black "Orbitron" font and a Star Wars yellow border.
 
     ![Question Screen Correct](assets/img/sw-quiz-correct-question.png)
-    
+
     ![Question Screen Incorrect](assets/img/sw-quiz-incorrect-question.png)
 
     * If the question number is below 10, the answer/input has been given and the answer has been chacked and highlighted correct or incorrect, a "Next" button will appear to move forward to the next question.
@@ -143,11 +143,11 @@ To help inspire the user and bring them into the Star Wars universe for their ex
     * The results modal is designed to give a rewarding feel with a personal message to the player and also give the determionation to get better.
     * It is intuitive and informative at the same time.
 
-![Large Logo](assets/images/logo-large.png)
+![Results Screen](assets/img/sw-quiz-result-modal.png)
 
-![Small Logo](assets/images/logo-small.png)
+![Results Screen Close Hover](assets//img/sw-quiz-result-modal-close-hover.png)
 
-![Sidebar Logo](assets/images/logo-sidebar.png)
+![Results Screen Play Again Hover](assets/img/sw-quiz-result-modal-play-again-hover.png )
 
 ---
 
