@@ -209,13 +209,12 @@ let questions = [
         answerC: "Dantooine",
         answerD: "Mustafar",
         correctAnswer: "answerA"
-    },
+    }
 ];
 
 /*------------------------------ The Game-----------------------------*/
 
 let usedQuestions = [];
-let currentQuestionIndex = 0;
 let playerScore = 0;
 
 /*------------------------------ The Start-----------------------------*/
@@ -225,32 +224,32 @@ document.getElementById("start-btn").addEventListener("click", function () {
     displayNextQuestion();
 });
 
-const startButton = document.querySelector('#start-btn');
+const startButton = document.querySelector("#start-btn");
 
 // Add a mouseover event listener to start button
-startButton.addEventListener('mouseover', () => {
+startButton.addEventListener("mouseover", function () {
     // Change the start button's background color
-    startButton.style.backgroundColor = '#a80000';
+    startButton.style.backgroundColor = "#a80000";
 });
 
 // Add a mouseout event listener to start button to reverse css change
-startButton.addEventListener('mouseout', () => {
+startButton.addEventListener("mouseout", function () {
     // Change the start button's background color back to its original color
-    startButton.style.backgroundColor = '';
+    startButton.style.backgroundColor = " ";
 });
 
-// This will hide the start screen and then display the question screen once start button is clicked. 
+// This will hide the start screen and then display the question screen once start button is clicked.
 function startGame() {
     document.getElementById("starting-screen").style.display = "none";
     document.getElementById("question-screen").style.display = "block";
-};
+}
 
 
 /*--------------- Question Randomizer / Options / User Answer / Check Answer ---------------*/
 
-// This function generates our 10 questions and once the 10th question has been answered, we display a finish button. 
+// This function generates our 10 questions and once the 10th question has been answered, we display a finish button.
 function displayNextQuestion() {
-    // Creating the randon question generator using the random index and Math..floor/random
+    // Creating the 1randon question generator using the random index and Math..floor/random
     let randomIndex;
     do {
         randomIndex = Math.floor(Math.random() * questions.length);
@@ -280,7 +279,7 @@ function displayNextQuestion() {
             // This will get correct answer from Questions object
             let correctAnswer = question.correctAnswer;
 
-            // Check the answer 
+            // Check the answer
             checkAnswer(userAnswer, correctAnswer);
 
             // Then disable all question buttons
@@ -324,23 +323,22 @@ function checkAnswer(userAnswer, correctAnswer) {
 document.getElementById("next-btn").addEventListener("click", function () {
     displayNextQuestion();
     enableAnswerButtons(document.getElementsByClassName("question-option"));
-    currentQuestionIndex++;
-    // To hide the button after displaying next question 
+    // To hide the button after displaying next question
     document.getElementById("next-btn").style.display = "none";
 });
 
-const nextButton = document.querySelector('#next-btn');
+const nextButton = document.querySelector("#next-btn");
 
 // Add a mouseover event listener to next button
-nextButton.addEventListener('mouseover', () => {
+nextButton.addEventListener("mouseover", function () {
     // Change the next button's background color
-    nextButton.style.backgroundColor = '#a80000';
+    nextButton.style.backgroundColor = "#a80000";
 });
 
 // Add a mouseout event listener to next button to reverse css change
-nextButton.addEventListener('mouseout', () => {
+nextButton.addEventListener("mouseout", function () {
     // Change the button's background color back to its original color
-    nextButton.style.backgroundColor = '';
+    nextButton.style.backgroundColor = " ";
 });
 
 /*------------------------------Finish Button-----------------------------*/
@@ -349,19 +347,19 @@ document.getElementById("finish-btn").addEventListener("click", function () {
     displayResults()
 });
 
-const finishButton = document.querySelector('#finish-btn');
+const finishButton = document.querySelector("#finish-btn");
 
-    // Add a mouseover listener to finish button
-    finishButton.addEventListener('mouseover', () => {
-        // Change the finish button's background color
-        finishButton.style.backgroundColor = '#a80000';
-    });
+// Add a mouseover listener to finish button
+finishButton.addEventListener("mouseover", function () {
+    // Change the finish button's background color
+    finishButton.style.backgroundColor = "#a80000";
+});
 
-    // Add a mouseout event listener to finish button to reverse css change
-    finishButton.addEventListener('mouseout', () => {
-        // Change the finish button's background color back to its original color
-        finishButton.style.backgroundColor = '';
-    });
+// Add a mouseout event listener to finish button to reverse css change
+finishButton.addEventListener("mouseout", function () {
+    // Change the finish button's background color back to its original color
+    finishButton.style.backgroundColor = " ";
+});
 
 /*------------------------------Results Screen-----------------------------*/
 // Bring up bootstrap modal and display users results
@@ -389,18 +387,18 @@ function displayResults() {
         document.getElementById("resultModal").style.display = "none";
     });
 
-    const closeButton = document.querySelector('#close-modal');
+    const closeButton = document.querySelector("#close-modal");
 
     // Add a mouseover listener to close button
-    closeButton.addEventListener('mouseover', () => {
+    closeButton.addEventListener("mouseover", function () {
         // Change the close button's background color
-        closeButton.style.backgroundColor = '#a80000';
+        closeButton.style.backgroundColor = "#a80000";
     });
 
     // Add a mouseout event listener to close button to reverse css change
-    closeButton.addEventListener('mouseout', () => {
+    closeButton.addEventListener("mouseout", function () {
         // Change the close button's background color back to its original color
-        closeButton.style.backgroundColor = '';
+        closeButton.style.backgroundColor = " ";
     });
 
     /*-----------------------Play Again Button---------------------*/
@@ -411,25 +409,24 @@ function displayResults() {
         restartGame();
     });
 
-    const playAgainButton = document.querySelector('#play-again-btn');
+    const playAgainButton = document.querySelector("#play-again-btn");
 
     // Add a mouseover listener to play again button
-    playAgainButton.addEventListener('mouseover', () => {
+    playAgainButton.addEventListener("mouseover", function () {
         // Change the play again button's background color
-        playAgainButton.style.backgroundColor = 'green';
+        playAgainButton.style.backgroundColor = "green";
     });
 
     // Add a mouseout event listener to play again button to reverse css change
-    playAgainButton.addEventListener('mouseout', () => {
+    playAgainButton.addEventListener("mouseout", function () {
         // Change the play again button's background color back to its original color
-        playAgainButton.style.backgroundColor = '';
+        playAgainButton.style.backgroundColor = " ";
     });
 };
 /*------------------------------Restart Game-----------------------------*/
 function restartGame() {
     // Reset all scores and variables
     usedQuestions = [];
-    currentQuestionIndex = 0;
     playerScore = 0;
 
     // Reset answer button styles
@@ -446,7 +443,7 @@ function restartGame() {
     document.getElementById("finish-btn").style.display = "none";
     document.getElementById("next-btn").style.display = "none";
 
-    // This is to ensure the modal is hidden 
+    // This is to ensure the modal is hidden
     let resultModal = bootstrap.Modal.getInstance(document.getElementById("resultModal"));
     if (resultModal) {
         resultModal.hide();
@@ -455,4 +452,4 @@ function restartGame() {
     // Restart the game by displaying the starting screen and hiding the question screen
     document.getElementById("question-screen").style.display = "none";
     document.getElementById("starting-screen").style.display = "block";
-}
+};
