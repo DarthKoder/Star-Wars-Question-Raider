@@ -235,7 +235,7 @@ startButton.addEventListener("mouseover", function () {
 // Add a mouseout event listener to start button to reverse css change
 startButton.addEventListener("mouseout", function () {
     // Change the start button's background color back to its original color
-    startButton.style.backgroundColor = " ";
+    startButton.style.backgroundColor = "";
 });
 
 // This will hide the start screen and then display the question screen once start button is clicked.
@@ -338,7 +338,7 @@ nextButton.addEventListener("mouseover", function () {
 // Add a mouseout event listener to next button to reverse css change
 nextButton.addEventListener("mouseout", function () {
     // Change the button's background color back to its original color
-    nextButton.style.backgroundColor = " ";
+    nextButton.style.backgroundColor = "";
 });
 
 /*------------------------------Finish Button-----------------------------*/
@@ -358,7 +358,7 @@ finishButton.addEventListener("mouseover", function () {
 // Add a mouseout event listener to finish button to reverse css change
 finishButton.addEventListener("mouseout", function () {
     // Change the finish button's background color back to its original color
-    finishButton.style.backgroundColor = " ";
+    finishButton.style.backgroundColor = "";
 });
 
 /*------------------------------Results Screen-----------------------------*/
@@ -390,15 +390,15 @@ function displayResults() {
     const closeButton = document.querySelector("#close-modal");
 
     // Add a mouseover listener to close button
-    closeButton.addEventListener("mouseover", function () {
+    closeButton.addEventListener("mouseover", function() {
         // Change the close button's background color
         closeButton.style.backgroundColor = "#a80000";
     });
 
     // Add a mouseout event listener to close button to reverse css change
-    closeButton.addEventListener("mouseout", function () {
+    closeButton.addEventListener("mouseout", function() {
         // Change the close button's background color back to its original color
-        closeButton.style.backgroundColor = " ";
+        closeButton.style.backgroundColor = "";
     });
 
     /*-----------------------Play Again Button---------------------*/
@@ -420,7 +420,7 @@ function displayResults() {
     // Add a mouseout event listener to play again button to reverse css change
     playAgainButton.addEventListener("mouseout", function () {
         // Change the play again button's background color back to its original color
-        playAgainButton.style.backgroundColor = " ";
+        playAgainButton.style.backgroundColor = "";
     });
 };
 /*------------------------------Restart Game-----------------------------*/

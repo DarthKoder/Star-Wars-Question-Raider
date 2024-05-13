@@ -13,8 +13,8 @@ All users will go throught 10 randoim questions picked from and object array of 
 [View Narth Vaders Question Raiders | Star Wars Edition project here](https://github.com/DarthKoder/Star-Wars-Question-Raider)
 - - -
 ## Table of Contents
-
 ### [User Experience (UX)](#user-experience-ux-1)
+* [Rationale](#rationale-1)
 * [User Stories](#user-stories)
 ### [Features](#features)
 * [Existing Features](#existing-features)
@@ -33,14 +33,19 @@ All users will go throught 10 randoim questions picked from and object array of 
 ### [Credits](#credits-1)
 ### [Acknowledgements](#acknowledgements-1)
 ---
+## Rationale
 
 ## User Experience (UX)
 
-This website is to have users enjoy themselves whilst testing their Star Wars knowledge using a fun quiz game to do so.
+### Rationale
+
+This website is designed to provide users enjoyment whilst seamlessly testing their Star Wars knowledge using a fun 10 question quiz game to do so.
+
+The aim is to cater to all fans of the genre, weather they are die hard fans or just dabbling in the genre the game is here to not only test but help people learn more about Star Wars.
 
 There is clear and simple intuitive buttons as guidance to help the user along their way, such as "Begin The Trials" start button, multiple choice questions to pick from and also "Next" & "Finish" buttons for the game. The results modal has the "Close" & "Play Again" buttons also. 
 
-To help inspire the user and bring them into the Star Wars universe for their experience, I have used familiar colours and fonts as well as an animated space background to really help immerse the user.
+To help inspire the user and bring them into the Star Wars universe for their experience, I have used familiar colours and fonts as well as an animated space background to help make the user feel immersed and really connect with the Star Wars theme. 
 
 ### User Stories
 
@@ -66,38 +71,58 @@ To help inspire the user and bring them into the Star Wars universe for their ex
 
 ## Features
 
-* This website is targeting people who interested in getting a bespoke kitchen in their home.
-* The user can view all galleries and things to consider, to help them make choices towards their new kitchen design.
-* They can contact us with any queries or to make any bookings by navigating to the 'Contact Us' page and filling out the form. 
-* Responsive on all device sizes.
+* This website is targeting people who interested in Star Wars.
+* The user can enjoy the Star Wars aesthetic whist testing their knowledge with a 10 question quiz game.
+* They can use the intuitive design to navigate through the game with ease, weather on a mobile,tablet or desktop computer.
+* It has responsive logic to higlight correct and incorrect questions to help the use know if they are correct or to learn where they went wrong.
 
 ### Existing Features
 
-* Navigation bar
-    * It is featured and fixed on all seperate pages.
-    * This has been reduced down and been placed in the center to flow with the layout of the rest of the page.
-    * I have used the same "El Messiri" font for this to compliment the logo as well as standing out against the majority "Exo" font that has been used throughout the site. 
-    * It contains a dropdown menu for the kitchen related items for ease of use and user expreience.
-    * I have used the same colour co-ordination with teal as the highlighted "active" page, whilst having the mouse hover turn the text to the teal colour; but in the dropdown menus a background colour of onyx will also appear. This is to make the user aware of what page they are on and also actively see what page they are potentially going to next when hovering over it. This hover change does not work on the page currently active.
-    * I removed the navbar toggler and navigation bar when viewed on a smaller screen and put in a sidebar navigation for this function.
-    * Includes links to the logo, home page, gallery, and sign-up page.
-    * It is identical in design across the pages.
-    * Allows easy navigation from page to page without having to revert back to the previous page via the "back" button.
+* Game Title
+    * This is the game title and series edition to show what the game is about and can be seen as constant throught the game and series (if any future game editions are to be made)
+    * I have use the famouse Star Wars colours for this such as the Star Wars yellow #ffbf50 & sith red #a80000, which is also the logos/series main colour.
 
-    ![Navigation Bar](assets/images/navbar.png)
+    ![Game Title](assets/img/sw-quiz-title.png)
 
-* Sidebar navigation 
-    * The sidebar was used to tidy the screen up and input to increase user experience when used on smaller screens. 
-    * It has all the same features and colourings as the navigation bar, but it instead has a toggler situated in the top right corner. When activated, the sidebar slides in from the right hand side of the screen and presents the logo in vertical wording on the left hand side.
-    * The navigation menu has the same features as the navigation bar, but is centered and in vertical format.
-    * There is a "X" close button situated on the right hand side of the logo text; you can also click anywhere else on the screen to close.
+* Starting Screen
+    * It is the opening screen to the game.
+    * This has the game title and series edition to show what the game is about (this is the same throughout all screens)
+    * It uses familliar fonts such as the "Star Wars" font and then "Orbitron", "Teko" & "Jersey 10" to give it more of a Star Wars feel and space like immersion.
+    * It contains a reactive button to allow easy navigation to start the game with an enticing prompt of "Begin The Trials" which is to be clicked to start the game. This button also has a hover effect to let the user know the button can be activated.
+    * I have used colours associated with Star Wars such as sith red #a80000, the famous Star Wars yellow #ffbf50, Jedi green, Jedi blue #2b5a99 along with a contrasting pale, light #fafafa, all on the space style black #000000. These colours are to help make the user feel immersed and really connect with the Star Wars theme. 
 
-    ![Sidebar](assets/images/sidebar.png)
+    ![Starting Screen](assets/img/star-wars-quiz-game-start-screen.png)
+
+* Question Screen 
+    * The Question Screen is the screen that come after clicking the "Begin The Trials" start button.
+    * It has the game title along with the series edition.
+    * This is where the question and multiple choice questions will appear for the user to see and pick from.
 
 
-* Logo
-    * I created something modern that stood out but was not to loud.
-    * I used the "EL Messiri" font for this, which seemed a nice fit and made it stand out against the main "Exo" font that I used for the majority of the site.
+    ![Question Screen](assets/img/star-wars-quiz-question-screen.png)
+
+    * The questions that appear will be randomised and shall not repeat any question in one game. 
+    * Depending on the users answer/input, the question choice clicked will highlight green if correct and red if incorrect. If incorrect the correct answer will also highlight green to help the user understand where they went wrong. 
+    * Once an answer/input has been given, the question buttons will be disable to stop the user from changing their answers.
+    * The question is using the "Star Wars" font in the Jedi blue colour.
+    * The multiple choice questions each appear in an oblong box with a white background with black "Orbitron" font and a Star Wars yellow border.
+
+    ![Question Screen Correct](assets/img/sw-quiz-correct-question.png)
+    ![Question Screen Incorrect](assets/img/sw-quiz-incorrect-question.png)
+
+    * If the question number is below 10, the answer/input has been given and the answer has been chacked and highlighted correct or incorrect, a "Next" button will appear to move forward to the next question.
+    * If the question number is at 10, the answer/input has been given and the answer has been chacked and highlighted correct or incorrect, a "Finish" button will appear to end the game and bring up the results modal.
+    * These buttons will also be reactive and change the background colour when hovered over.
+
+    ![Question Screen Next Button Hover](assets/img/sw-quiz-next-btn.png)
+    ![Question Screen Next Button Hover](assets/img/sw-quiz-next-btn-hover.png)
+    ![Question Screen Finish Button](assets/img/sw-quiz-finish-btn.png)
+    ![Question Screen Finish Button Hover](assets/img/sw-quiz-finish-btn-hover.png)
+
+
+* Results Screen
+    * The results screen is a pop up modal that appears after the user has completed 10 questions and then presses the "Finish" button. 
+    * I have used the "Orbitron" font for this, which is consistant with the theme and the rest of the game. 
     * The colours I used for this included a teal colour, which is the main colour I used for accenting the page, along with the subtle onyx.
     * These colours are used throughout the site for recognition and user comfort.
     * It has been reduced when on smaller screen sizes, along with being situated on the left with no slogan as to not make the screen too cluttered for user experience. This will reduce down to vertical wording it on very small screens, similar to side bar layout.
@@ -110,156 +135,6 @@ To help inspire the user and bring them into the Star Wars universe for their ex
 
 ![Sidebar Logo](assets/images/logo-sidebar.png)
 
-* Main Headings 
-
-    * Are composed of simple teal colour capitalised text with 'Dancing Script' font, other than the main page cover heading text uses 'Exo' font.
-    * All but the about page heading reduce down and are positioned on the left hand side when viewed on smaller screens. 
-    * Main heading, which is unique for each page:
-        * The home page is comprised of cover text 'STOP HUNTING We have the perfect kitchen for you' with section headings.
-            * This page is to attract users and give them a little taste of the company and what it can do for them.
-
-            ![Main Cover Heading Text](assets/images/HKD-main-page.png)
-            ![Main Cover Heading Text](assets/images/HKD-main-page-mobile.png)
-
-            *  Section one, 'We Are Here For You'.
-                * This section contains a short descriptive paragraph.
-                * It gives us a brief description of the company and what it has to offer.
-
-                    ![We Are Hear For You](assets/images/we-are-here-for-you-p.png)
-
-            * Section two, 'Why Hunter Kitchens?'.
-                * This consits of a few short paragraphs.
-                * It has a short description the company and how it works.
-                * Shows the user what to expect and what we can accomplish working together.
-                * Gives a sense of quality and high standard to the company.
-
-                    ![Why Hunter Kitchens](assets/images/why-hunter-kitchens-p.png)
-
-        * Modern kitchen gallery is made up of 'Some Modern Inspiration...'.
-            * This page is a gallery for users to see some of the modern kitchens we have installed and to inspire them with their designs.
-
-        ![Modern Kitchen Gallery](assets/images/modern-kitchen-gallery-h2.png)
-        ![Modern Kitchen Gallery Mobile](assets/images/modern-gallery-mobile-h2.png)
-
-        * Traditional kitchen gallery has the heading of 'Some Traditional Inspiration...'
-            * This page is a gallery for users to see some of the traditional kitchens we have installed and to inspire them with their designs.
-
-        ![Traditional Kitchen Gallery](assets/images/traditional-gallery-h2.png)
-        ![Traditional Kitchen Gallery Mobile](assets/images/traditional-gallery-mobile-h2.png)
-
-        * Things to comsider is comprised of 'Things To Consider...'.
-            * This page is to help the user spark some ideas as to what to think about when designing a kitchen, such as colours, materials etc. 
-
-        ![Things To Consider](assets/images/things-to-consider-h2.png)
-        ![Things To Consider](assets/images/things-to-consider-mobile-h2.png)
-
-        * About page is comprised of 'Our Story'.
-            * The about page tells the user the story of Hunter Kitchen Designs and introduces them to the team behind it all.
-                * It also contains a small line of emotionally grabbing stories help us to give meaning to the things around us. This is ours. 
-
-                ![Our Story](assets/images/our-story-h2.png)
-                ![Our Story](assets/images/our-story-mobile-h2.png)
-
-        * Contact page consists of 'Get In Touch' 
-            * This page is for contacting the company.
-            * It has a form to fill out with an email address and a text area for writing a message. 
-
-                ![Get In Touch](assets/images/contact-form.png)
-
-                * This page also has a modal that thanks the user for sending a message once it has been submitted. 
-                * The heading reads 'Thank You!'.
-
-                ![Thank You](assets/images/contact-modal.png)
-
-* Home Page
-    * The main home page is the most important as this is the first page to grip the users interest and shows them that this is where they want to be.
-    * For this reason, I wanted to keep the page modern and eye catching, yet subtle.
-    * I managed this by using an attractive image with neutral colours.
-        * I also gave it a zoom animation to draw the users attention along with the cover text to entice the users trust.
-    * The combination of this, along with the navigation bar and logo, altogether gives the user a welcoming feel for longevity and ease of use.
-
-    ![Main Cover Heading Text](assets/images/HKD-main-page.png)
-    ![Main Cover Heading Text](assets/images/HKD-main-page-mobile.png)
-    ![Main Cover Heading Text](assets/images/HKD-main-page-pt2.png)
-    ![Main Cover Heading Text](assets/images/HKD-main-page-mobile-pt2.png)
-    
-
-* Gallery Pages
-    * There are two gallery pages, Modern & Traditional. 
-    * They are images in grid layout for the user to look at for inspiration and to see the company's previous projects. 
-    * Each individual image has a hover animation.
-    * Each image can be clicked as a link and will take you to a seperate tab to be viewed at full-size.
-    * The galleries are responsive and will reduce down to 1 column on smaller screens. 
-
-    ![Modern Gallery](assets/images/modern-gallery.png)
-    ![Modern Gallery Mobile](assets/images/modern-gallery-mobile.png)
-    ![Traditional Gallery](assets/images/traditional-gallery.png)
-    ![Traditional Gallery Mobile](assets/images/traditional-gallery-mobile.png)
-
-* 'Things To Consider' Page
-    * This page is to help identify a few things regarding kitchen design.  
-    * It is to help the user spark some ideas as to what to think about when designing a kitchen, such as colours, materials etc. 
-    * It is also responsive and reduces down to a single column on smaller screen sizes. 
-
-    ![Things To Consider](assets/images/things-to-consider.png)
-    ![Things To Consider Mobile](assets/images/things-to-consider-mobile.png)
-
-* About Page
-    * This section will allow users to get information about Hunter Kitchen Design.
-    * This page gives an overview of the company's story. 
-    * You can see more about the team.
-    * There are sections with different pieces of information for the user, regarding the company.
-    
-    ![About Page](assets/images/about-page.png)
-    ![About Page Mobile](assets/images/about-page-mobile.png)
-
-    * Section one, 'THE BEGINNING'.
-        * This section contains a short descriptive paragraph.
-        * It gives us a brief description of how the company came to be, and its origin story.
-
-        ![The Beginning](assets/images/the-beginning-h3.png)
-
-    * Section two, 'OUR PROCESS'
-        * This consists of a short paragraph.
-        * It has a short description of how the company approaches things along the way.
-        * Shows the user how they will be treated.
-
-        ![Why Hunter Kitchens](assets/images/our-process-h3.png)
-
-    * Section three, 'THE HUNTER DIFFERENCE'
-        * This entails of a short paragraph.
-        * This tells the user what is different about Hunter Kitchen Designs and why they should choose them.
-        * Shows the user why HKD stands out above the rest.
-
-        ![Why Hunter Kitchens](assets/images/the-hunter-difference-h3.png)
-
-    * Section four, 'MEET THE TEAM'
-        * This is the second part of the page introducing the team members.
-        * It has circular images with text underneath them, acting as quotations.
-        * They also respond a reduce down into single file when on smaller screens.
-
-        ![Why Hunter Kitchens](assets/images/meet-the-team.png)
-        ![Why Hunter Kitchens](assets/images/meet-the-team-mobile.png)
-* Contact Us Page
-    * This page is to allow the user to contact the company. 
-    * There is a form to fill out with and email address and a text area to fill out with a message. 
-    * It would have a submit button, but please note that for now I have used a button for the modal to appear until the project is fully live as issues with submit call to action with the modal was causing minor issues.
-    * It will produce a modal thanking the customer for getting in touch once a message has been submitted.
-    * This page is also responsive.
-
-    ![Contact Us](assets/images/contact-us-page.png)
-    ![Contact Us Mobile](assets/images/contact-us-mobile.png)
-    ![Thank You Modal](assets/images/thank-you-modal.png)
-
-* Footer
-    * This provides contact information such and telephone number and email address that has a link to outlook for convenience.
-    * Links to the social media will open in a new tab to allow easy navigation for the user.
-    * The accent colour is a light sea green to stand out.
-    * This is the same on every page.
-    * This is responsive and reduces down to a vertical layout when viewed on smaller screens.
-
-    ![Footer](assets/images/footer.png)
-    ![Footer Mobile](assets/images/footer-mobile.png)
 ---
 
 ## Features Left to Implement
