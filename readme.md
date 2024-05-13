@@ -41,7 +41,7 @@ All users will go throught 10 randoim questions picked from and object array of 
 
 This website is designed to provide users enjoyment whilst seamlessly testing their Star Wars knowledge using a fun 10 question quiz game to do so.
 
-The aim is to cater to all fans of the genre, weather they are die hard fans or just dabbling in the genre the game is here to not only test but help people learn more about Star Wars.
+The aim is to cater to all fans of the genre, weather they are die hard fans or just dabbling in the genre the game is here to not only test but help people learn more about Star Wars. It is intuitive and informative at the same time.
 
 There is clear and simple intuitive buttons as guidance to help the user along their way, such as "Begin The Trials" start button, multiple choice questions to pick from and also "Next" & "Finish" buttons for the game. The results modal has the "Close" & "Play Again" buttons also. 
 
@@ -108,6 +108,7 @@ To help inspire the user and bring them into the Star Wars universe for their ex
     * The multiple choice questions each appear in an oblong box with a white background with black "Orbitron" font and a Star Wars yellow border.
 
     ![Question Screen Correct](assets/img/sw-quiz-correct-question.png)
+    
     ![Question Screen Incorrect](assets/img/sw-quiz-incorrect-question.png)
 
     * If the question number is below 10, the answer/input has been given and the answer has been chacked and highlighted correct or incorrect, a "Next" button will appear to move forward to the next question.
@@ -115,19 +116,32 @@ To help inspire the user and bring them into the Star Wars universe for their ex
     * These buttons will also be reactive and change the background colour when hovered over.
 
     ![Question Screen Next Button Hover](assets/img/sw-quiz-next-btn.png)
+
     ![Question Screen Next Button Hover](assets/img/sw-quiz-next-btn-hover.png)
+
     ![Question Screen Finish Button](assets/img/sw-quiz-finish-btn.png)
+
     ![Question Screen Finish Button Hover](assets/img/sw-quiz-finish-btn-hover.png)
 
 
 * Results Screen
     * The results screen is a pop up modal that appears after the user has completed 10 questions and then presses the "Finish" button. 
     * I have used the "Orbitron" font for this, which is consistant with the theme and the rest of the game. 
-    * The colours I used for this included a teal colour, which is the main colour I used for accenting the page, along with the subtle onyx.
-    * These colours are used throughout the site for recognition and user comfort.
-    * It has been reduced when on smaller screen sizes, along with being situated on the left with no slogan as to not make the screen too cluttered for user experience. This will reduce down to vertical wording it on very small screens, similar to side bar layout.
-    * The wording has been place vertically when used in the sidebar navigation system, which uses the highlighted HKD well.
-    * It has a minaimalistic attractive feel to it.
+    * This is a modal pop up box that has a title section, body section and a footer section. 
+    * The title section has a the title "Completed The Questions, You Have!" to let the user know they have completed taking the quiz. 
+       - This has a black background with the yellow font #ffbf50. 
+    * The modals body section contains the score results for the user, a message that changes depending on the score you have (there are 3 variables) and then some text asking the user if they would like to play again. 
+       - This has a light #fafafa background 
+       - The results score text is large and red #a80000 to stand out
+       - The message text is black of colour
+       - The "Would you like to play gain?" text is in jedi green
+       - I have made these different colours to stand out and make it clear that they are different sections of the body
+    * The footer contains two buttons, one to close the modal and the other to play again and take the user back to the starting screen. 
+       - Both buttons have the original button layout with black background and withe text with a red border.
+       - The close button when hovered over has the background turn red like the othger buttons in the game.
+       The play again button when hovered over, turns green to help signify the green light to play again. 
+    * The results modal is designed to give a rewarding feel with a personal message to the player and also give the determionation to get better.
+    * It is intuitive and informative at the same time.
 
 ![Large Logo](assets/images/logo-large.png)
 
