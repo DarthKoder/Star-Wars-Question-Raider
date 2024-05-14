@@ -177,21 +177,44 @@ To help inspire the user and bring them into the Star Wars universe for their ex
 
 ## Bug fixes 
 
-* At first, the navigation was situated on the left with a larger brand logo as the main home navigation and a toggler on the right when in a smaller screen. 
+* One issue I came across was that the "Next" button was not working when pressed. 
+   - After rigorous testing and trial and error, I realised that I have the button disabled and had to enable it by editing code and moving the diplayNextQuestion function to the top. 
 
-* I removed the brand logo as it was not visually clean and I had trouble moving it along with the other nevigation text with Bootstraps design. 
+* Another bug I had was that, while testing, I found that when i was going through the questions and it was surpassing the 10 question limit and had not end. 
+   - This was due having the code wrong for hiding the "Next" button and displaying the "Finish" button, which in turn,  never made it possible to end the game and bring up the results screen. 
 
-* The navbar toggler was stuck at at the same height as the navbar, which is situated under the logo text. This was not visually desireable, this was then replaced with the sidebar toggler and then situated in line with the logo on the top right of the screen, this also came with its own issues.
+* The biggest issue I had after testing the game cycle and finish button appearing, was that the game was only displaying 4 questions before initializing the "Finish" button. 
+   -	After console logging number of questions generated in the displayNextQuestion function, I have found that the start button was generating 2 questions(in the console log) then each time the next button was clicked it would generate another 2, then 4 etc . 
+   -	I searched through the code and after rigorous testing, figured out where I had gone wrong. 
+   -	I had "};" in the wrong place and had:
+   "disableAnswerButtons()"
+   "enableAnswerButtons()"
+   "checkAnswer()" functions 
+   and the code for: 
+   next button 
+   "Finish" button & "displayResults" all in the "displayNextQuestion()" function, which was called upon when the next button was clicked hence why it was displaying more and more questions once the game had started. 
+   -	I still at this point had the start button causing 2 questions to be generated before the game had actually started
+   -	After going through the code I realised that because I had the "displayNextQuestion()" function being called within the "startGame()" function and the "startGame()" function was called when the start button was clicked. This meant that the "displayNextQuestion" function was being called twice, once when the start button was clicked and again when the "startGame()" function was running.  
 
-* The issue I ran into with the sidebar and toggler was that with Bootstraps design, it was causing a column of whitespace down the right side of all pages. I overcame this by finding out what Bootstrap CSS classes were causing this and I finally found the issues and resolved them using my custom CSS.
 
-* Social icon margins in footer were causing one of the icons to move beneath the others when reducing the screen size. I experimented with margin sizes to keep them inline throughout.
-
-* ARIA labels for screen readers amended for accessibility once tested.
-
-* Meta descriptions were added to improve accessibility for screen readers.
-
-* Accent colours were altered slightly to help with colour ratios, helping with accessibility issues after testing - mainly with footer. In the end, I brightened the accent colours and made the background darker to help them stand out.
+* I encountered a bug where the "Next" button was showing after question 10 which then needs to be pressed for the finish button to appear. 
+   - This was overcome by changing the code from: 
+      - if (usedQuestions.length <= 10) {
+                document.getElementById("next-btn").style.display = "block";
+            } else {
+                document.getElementById("next-btn").style.display = "none";
+                document.getElementById("finish-btn").style.display = "block";
+            }
+        });
+   - To:
+      - if (usedQuestions.length <= 9) {
+                document.getElementById("next-btn").style.display = "block";
+            } else {
+                document.getElementById("next-btn").style.display = "none";
+                document.getElementById("finish-btn").style.display = "block";
+            }
+        });
+   - This way, the "Next" button would not appear on the 10th question, only the "Finish" button.
 
 ---
 
