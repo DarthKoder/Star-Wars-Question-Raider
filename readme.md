@@ -222,22 +222,22 @@ To help inspire the user and bring them into the Star Wars universe for their ex
 
  * [HTML5](https://en.wikipedia.org/wiki/HTML5)
  * [CSS3](https://en.wikipedia.org/wiki/CSS) 
-
+ * [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 ---
 
 ## Frameworks, Libraries & Programs Used
 
- * [Codeanywhere](https://app.codeanywhere.com/)
-    * To write and edit the code.
+ * [Visual Studio Code](https://visualstudio.microsoft.com/)
+    * Desktop version to write and edit the code. 
  * [Github](https://github.com/)
     * Deployment of the website and storing the files online.
     * Version control.
  * [Google Fonts](https://fonts.google.com/)
     * Import main fonts the website.
-* [Font Awesome](hhttps://fontawesome.com/)
-    * Used for importing icons.
+* [Font Awesome](https://www.cdnfonts.com/)
+    * Used for importing fonts.
 * [Bootstrap v5.3](https://getbootstrap.com/)
-    * Used for its helpful responsive layouts and components.
+    * Used for its helpful responsive layouts and components such as the results modal.
 
 ---
 
