@@ -106,6 +106,9 @@ To help inspire the user and bring them into the Star Wars universe for their ex
     * Once an answer/input has been given, the question buttons will be disable to stop the user from changing their answers.
     * The question is using the "Star Wars" font in the Jedi blue colour.
     * The multiple choice questions each appear in an oblong box with a white background with black "Orbitron" font and a Star Wars yellow border.
+    * The question buttons are also reactive and the background turns yellow when hovered over.
+
+    ![Question Hover](assets/img/sw-quiz-question-hover.png)
 
     ![Question Screen Correct](assets/img/sw-quiz-correct-question.png)
 
@@ -247,6 +250,7 @@ The W3C Markup Validator and W3C CSS Validator services were used to validate ev
 
  * [W3C Markup Validtor](https://validator.w3.org/)
  * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+ * [JS Lint](https://www.jslint.com/)
 
 ### Validation results
 
@@ -254,43 +258,14 @@ The W3C Markup Validator and W3C CSS Validator services were used to validate ev
 <summary>index.html
 </summary>
 
-![Home Page validation result](/assets/images/index.html-checker-results.png)
+![Index.html validation result](/assets/img/index.html-validator-results.png)
 </details>
-<details>
-<summary>modern-gallery.html
-</summary>
 
-![Gallery validation result](/assets/images/modern-gallery-html-check-results.png)
-</details>
-<details>
-<summary>traditional-gallery.html
-</summary>
-
-![Gallery validation result](/assets/images/traditional-gallery-html-check-results.png)
-</details>
-<details>
-<summary>consider.html
-</summary>
-
-![Sign Up page validation result](/assets/images/consider-html-check-results.png)
-</details>
-<details>
-<summary>about.html
-</summary>
-
-![Application Received validation result](/assets/images/about-html-check-results.png)
-</details>
-<details>
-<summary>contact.html
-</summary>
-
-![Gallery validation result](/assets/images/contact-html-check-results.png)
-</details>
 <details>
 <summary>style.css
 </summary>
 
-![CSS validation result](/assets/images/css-checker-results.png)
+![CSS validation result](/assets/img/sw-quiz-css-validator-results.png)
 </details>
 
 ### Manual Testing

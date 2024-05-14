@@ -98,7 +98,7 @@ body {
     border-radius: 20px;
 }
 
-.question-option::hover {
+.question-option:hover {
     background-color: #ffbf50;
     color: #000000;
     border: 2px solid #ffbf50;
@@ -354,7 +354,7 @@ body {
         border-radius: 20px;
     }
 
-    .question-option::hover {
+    .question-option:hover {
         background-color: #ffbf50;
         color: #000000;
         border: 2px solid #ffbf50;
@@ -482,7 +482,7 @@ body {
         border-radius: 20px;
     }
 
-    .question-option::hover {
+    .question-option:hover {
         background-color: #ffbf50;
         color: #000000;
         border: 2px solid #ffbf50;
