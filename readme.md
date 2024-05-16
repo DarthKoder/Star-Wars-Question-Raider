@@ -156,26 +156,24 @@ To help inspire the user and bring them into the Star Wars universe for their ex
 
 ## Features Left to Implement
 
-* The colouring was important to me; I wanted to emphasise the first letters of each word that can later shortened to HKD and possibly be used to create and emblem for the company. I envisioned this emblem as the capitalised letters being verticaly staggered in a step-like fashion.
-* Adds radio buttons to the form to highlight what type of kitchen the user is interested in.
-* Updated gallery with additional images.
-* Videos of previous projects.
-* Reduces the size of images to make gallery load times better.
-* After having different users test and give feedback, I would like to stop the 'kitchens' navtext in the sidebar from moving to the left when activated as one user bought this up and stated it would be prefered for it to stay central.
+* Too add more questions for more variety to the quiz and returning users.
+* I could add a hints button which, when pressed, gave the user a hint to the answer of that question. 
+* Changing colour schemes for the results box depending on the users score. 
+* Adding special options such as 50 / 50 but a limited amount that may be earned throught the game if the game was extended. 
 
 ## Design
 
  * Colour Scheme
-    * Primary colours used on the website: ![Color Scheme](/assets/images/colour-scheme-hkd.png)
+    * Primary colours used on the website: ![Color Scheme](/assets/img/sw-quiz-colour-scheme.png)
 
  * Typography
-    * 'Exo' font is the main font used throughout the site with sans-serif as its fallback font, in case 'Exo' doesn't import for any reason.
-    * The main logo, navbar & sidebar use the 'El Messiri' font with the back up of sans serif in case of any importing issues.
-    * We also have the 'Dancing Script' font for the page headings with a back up of sans serif in case of any importing issues.
+    * 'Orbitron' font is the main font used throughout the site with the addition of "Star Wars", "Teko" & "Jersery 10" for certain aspects. These all have sans-serif as its fallback font, in case the imported fonts dont load for any reason.
+    * The main logo uses the 'Orbitron' font while the edition for this particular edition is the "Star Wars" font, this will change with other editions to match the theme.
+    * "Teko" & "Jersey 10" have been used in the starting screen for the H2 and paragraphs respectively. 
 
  * Wireframes
     * Figma: Easy to create, uses and shares detailed images whilst also effective.
-    * Please find my wireframes here: [Figma: HKD Wireframes](https://www.figma.com/file/fupdLpMx3Fb1vqw2rvBQ2N/PM1-Hunter-Kitchen-Design?type=design&t=mSfuEJTOu1VWCTwQ-6)
+    * Please find my wireframes here: [Figma: Star Wars Quiz Game](https://www.figma.com/design/eaYZirqx29lepICWkza2ik/SW-Quiz--Game?node-id=0%3A1&t=2xEmSDLvmOgxVaHC-1)
 ---
 
 ## Bug fixes 
