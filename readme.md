@@ -360,7 +360,7 @@ By forking the repository, we make a copy of the original repository on our GitH
 ---
 
 ## Acknowledgements
- * Code Institute for all the necessary information needed towards this project.
- * My mentor Mitko Bachvarov provided helpful feedback, a link to the Flexbox guide, as well as a good README template to follow.
+ * My mentor Mitko for helping me with ideas for the game and ways to build it. 
+ * W3schools for the information online needed to help me build this game. 
  * Slack community for encouragement and information.
  * My motivation for this project was my parter, who is currently an up and coming Kitchen Designer and helped me with some of the information presented on the site; along with the image of her.I wanted to create this site for her and her future career.
