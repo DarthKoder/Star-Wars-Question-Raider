@@ -235,8 +235,6 @@ To help inspire the user and bring them into the Star Wars universe for their ex
     * Version control.
  * [Google Fonts](https://fonts.google.com/)
     * Import main fonts the website.
-* [Font Awesome](https://www.cdnfonts.com/)
-    * Used for importing fonts.
 * [Bootstrap v5.3](https://getbootstrap.com/)
     * Used for its helpful responsive layouts and components such as the results modal.
 
@@ -270,10 +268,13 @@ The W3C Markup Validator and W3C CSS Validator services were used to validate ev
 
 * The website was tested on Google Chrome & Microsoft Edge.
 * The website was viewed on a desktop computer and Moto G Power mobile phone.
-* A large amount of testing was done to ensure links between pages are working correctly on all pages.
+* A large amount of manual testing was done to ensure all buttons are working correctly.
+* A large amount of manual testing was done to ensure that the logic behind the game worked and the user experience is fulfilled.
+* A large amount of manual testing was done to ensure that there were no bugs hindering the game and any progression.
 * Family and friends were asked to review the website for a better understanding of the user experience.
 * Dev Tools was used to test how the site looks on various screen sizes.
 * Dev Tools Lighthouse was use to test the performance accessibility, best prectices and SEO of each page.
+* JS Lint was used to ensure there are no major issues with the script.
 
 ### Lighthouse Report
 
@@ -282,43 +283,14 @@ The W3C Markup Validator and W3C CSS Validator services were used to validate ev
 <summary>Home Page
 </summary>
 
-![Home Page lighthouse report](/assets/images/index.html-lighthouse-test.png)
+![Starting Screen Lighthouse Report (index.html)](/assets/img/star-wars-quiz-start-screen-lighthouse.png)
 </details>
+
 <details>
-<summary>Modern Gallery
+<summary>Home Page
 </summary>
 
-![Modern gallery lighthouse report](/assets/images/modern-gallery-lighthouse-test.png)
-</details>
-<details>
-<summary>Traditional Gallery
-</summary>
-
-![Traditional gallery lighthouse report](/assets/images/traditional-gallery.html-lighthouse.png)
-</details>
-<details>
-<summary>Thing To Consider Page
-</summary>
-
-![Consider Page lighthouse report](/assets/images/consider.html-lighthouse-test.png)
-</details>
-<details>
-<summary>About Page
-</summary>
-
-![About lighthouse report](/assets/images/about.html-lighthouse-test.png)
-</details>
-<details>
-<summary>Contact Page
-</summary>
-
-![Contact lighthouse report](/assets/images/contact.html-lighthouse-test.png)
-</details>
-<details>
-<summary>Modal Pop up Page
-</summary>
-
-![Modal lighthouse report](/assets/images/modal-lighthouse-test.png)
+![Question Screen Lighthouse Report (index.html)](/assets/img/star-wars-quiz-questions-lighthouse.png)
 </details>
 
 #### Mobile analysis
@@ -326,43 +298,14 @@ The W3C Markup Validator and W3C CSS Validator services were used to validate ev
 <summary>Home Page
 </summary>
 
-![Home Page lighthouse report](/assets/images/index.html-mobile-lighthouse-test..png)
+![Starting Screen Mobile Lighthouse Report (index.html)](/assets/img/sw-quiz-start-mobile-lighthouse.png)
 </details>
+
 <details>
-<summary>Modern Gallery
+<summary>Home Page
 </summary>
 
-![Modern gallery lighthouse report](/assets/images/modern-gallery.html-mobile-lighthouse.png)
-</details>
-<details>
-<summary>Traditional Gallery
-</summary>
-
-![Traditional gallery lighthouse report](/assets/images/traditional-gallery.html-mobile-lighthouse.png)
-</details>
-<details>
-<summary>Thing To Consider Page
-</summary>
-
-![Consider Page lighthouse report](/assets/images/consider.html-mobile-lighthouse-test..png)
-</details>
-<details>
-<summary>About Page
-</summary>
-
-![About lighthouse report](/assets/images/about.html-mobile-lighthouse-test.png)
-</details>
-<details>
-<summary>Contact Page
-</summary>
-
-![Contact lighthouse report](/assets/images/contact.html-mobile-lighthouse-test.png)
-</details>
-<details>
-<summary>Modal Pop up Page
-</summary>
-
-![Modal lighthouse report](/assets/images/modal-mobile-lighthouse-test.png)
+![Question Screen Mobile Lighthouse Report (index.html)](/assets/img/sw-quiz-question-mobile-lighthouse.png)
 </details>
 
 ---
@@ -372,7 +315,7 @@ The W3C Markup Validator and W3C CSS Validator services were used to validate ev
 ### GitHub Pages
 
 GitHub Pages used to deploy live version of the website.
-1. Log in to GitHub and locate [GitHub Repository Hunter Kitchen Design](https://github.com/DarthKoder/Hunter-Kitchen-Designs)
+1. Log in to GitHub and locate [GitHub Repository Hunter Kitchen Design](https://github.com/DarthKoder/Star-Wars-Question-Raider)
 2. At the top of the Repository(not the main navigation) locate "Settings" button on the menu.
 3. Scroll down the Settings page until you locate "GitHub Pages".
 4. Under "Source", click the dropdown menu "None" and select "Main" and click "Save".
@@ -412,8 +355,8 @@ By forking the repository, we make a copy of the original repository on our GitH
 
 ### Media 
 
- * [Pexels](https://www.pexels.com/) free stock photos, royalty free images.
- * [Pixabay](https://pixabay.com/) free stock photos, royalty free images.
+ * [Pexels](https://www.pexels.com/) free stock photos & videos, royalty free images & videos.
+
 ---
 
 ## Acknowledgements
