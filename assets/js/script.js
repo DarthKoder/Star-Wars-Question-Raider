@@ -183,7 +183,7 @@ let questions = [
 
     {
         id: 19,
-        title: "According to Obi-Wan, how long had the Jedi been the guardians of peace and justice in the galaxy?",
+        title: "According to obi-Wan, how long had the Jedi been the guardians of peace and justice in the galaxy?",
         answerA: "More than 1000 generations",
         answerB: "More than 100,000 generations",
         answerC: "More than 100 generations",
