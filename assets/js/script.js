@@ -1,5 +1,4 @@
 /*------------------------------ Questions -----------------------------*/
-
 let questions = [
     {
         id: 1,
@@ -214,6 +213,7 @@ let questions = [
 
 /*------------------------------ The Game-----------------------------*/
 
+let question = "";
 let usedQuestions = [];
 let playerScore = 0;
 
@@ -256,7 +256,7 @@ function displayNextQuestion() {
     } while (usedQuestions.includes(randomIndex));
     usedQuestions.push(randomIndex);
 
-    let question = questions[randomIndex];
+    question = questions[randomIndex];
     let questionScreen = document.getElementById("question-screen");
     // This will create the HTML for the questions & answers once generated from randomizer
     questionScreen.innerHTML = `
@@ -283,7 +283,7 @@ function displayNextQuestion() {
             checkAnswer(userAnswer, correctAnswer);
 
             // Then disable all question buttons
-            disableAnswerButtons(answerButtons);
+            toggleAnswerButtons(answerButtons, true);
 
             // Shows next button after user answers 9 question and shows the finish button after the 10th
             if (usedQuestions.length <= 9) {
@@ -295,16 +295,10 @@ function displayNextQuestion() {
         });
     };
 };
-// Disabling the answer buttons
-function disableAnswerButtons(answerButtons) {
-    for (let button of answerButtons) {
-        button.disabled = true;
-    }
-}
-
-function enableAnswerButtons(answerButtons) {
-    for (let button of answerButtons) {
-        button.disabled = false;
+// Toggling the answer buttons (generic function)
+function toggleAnswerButtons(answerButtons, disabled) {
+    for ( let button of answerButtons) {
+        button.disabled = disabled
     }
 }
 
@@ -322,7 +316,7 @@ function checkAnswer(userAnswer, correctAnswer) {
 // This is to enabnle the button again and produce the next question once the button is clicked
 document.getElementById("next-btn").addEventListener("click", function () {
     displayNextQuestion();
-    enableAnswerButtons(document.getElementsByClassName("question-option"));
+    toggleAnswerButtons(document.getElementsByClassName("question-option"),false);
     // To hide the button after displaying next question
     document.getElementById("next-btn").style.display = "none";
 });
@@ -372,11 +366,11 @@ function displayResults() {
     let scoreMessage = document.getElementById("score-message");
     if (playerScore <= 3) {
         scoreMessage.textContent = `One with the force, you are not. A lot to learn, you have`
-    };
-    if (playerScore >= 4 && playerScore <= 7) {
+    }
+    else if (playerScore >= 4 && playerScore <= 7) {
         scoreMessage.textContent = `Not bad.. not great. Your path, you must decide.`
-    };
-    if (playerScore >= 8) {
+    }
+    else {
         scoreMessage.textContent = `Powerful you have become! Always pass on what you have learned, you Jedi! `
     }
     resultModal.show();
@@ -437,7 +431,7 @@ function restartGame() {
     }
 
     // Enable answer buttons for the next game
-    enableAnswerButtons(answerButtons);
+    toggleAnswerButtons(answerButtons,false);
 
     // This is to hide finish button and next button
     document.getElementById("finish-btn").style.display = "none";
