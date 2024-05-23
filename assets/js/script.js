@@ -430,7 +430,6 @@ function displayResults() {
 /*------------------------------Restart Game-----------------------------*/
 function restartGame() {
     // Reset all scores and variables
-    userName = "";
     usedQuestions = [];
     playerScore = 0;
 
