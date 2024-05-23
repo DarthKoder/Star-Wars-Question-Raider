@@ -15,10 +15,11 @@
 </head>
 
 <body>
-    
+
     <!-- Page Heading -->
 
-    <header class="container page-heading" id="page-header" aria-label="Narth Vaders Question Raiders - Star Wars Edition">
+    <header class="container page-heading" id="page-header"
+        aria-label="Narth Vaders Question Raiders - Star Wars Edition">
         <h1>Narth Vaders<br> Question Raiders</h1>
         <h2>Star Wars Edition</h2>
     </header>
@@ -32,19 +33,21 @@
     <!-- Starting Screen -->
 
     <div class="container start-screen" id="starting-screen">
+        <label for="name-input" id="name-label">Name</label>
+        <input class="input-name" id="name-input" minlength="2" maxlength="12" placeholder="(2-12 characters long)" required></input>
+        <p id="error-message" style="color: red; display: none;">Name must be between 2 and 12 characters.</p>
         <h2 id="start-title">Test Your Star Wars Knowledge</h2>
         <p id="start-text">
-            A trial of star wars based knowledge questions to test your connection with the force!
-            <br>
-            <br>
+            A trial of Star Wars-based knowledge questions to test your connection with the force!
+            <br><br>
             Have you got what it takes to become a true Jedi Knight?
         </p>
-        <button type="button" id="start-btn" onClick="startGame()" aria-label="Start Button">Begin The Trials</button>
+        <button type="button" id="start-btn" aria-label="Start Button">Begin The Trials</button>
     </div>
 
     <!-- Questions -->
 
-    <div class="container questions" id="question-screen">
+    <div class="container questions" id="question-screen" style="display: none;">
     </div>
 
     <!-- Next Button -->
@@ -86,7 +89,8 @@
             </div>
         </div>
     </div>
-<script src="./assets/js/script.js"></script>
+    </div>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

@@ -213,6 +213,7 @@ let questions = [
 
 /*------------------------------ The Game-----------------------------*/
 
+let userName = "";
 let question = "";
 let usedQuestions = [];
 let playerScore = 0;
@@ -239,9 +240,18 @@ startButton.addEventListener("mouseout", function () {
 });
 
 // This will hide the start screen and then display the question screen once start button is clicked.
+// We are also validating the name input and storing the users name for results screen
 function startGame() {
-    document.getElementById("starting-screen").style.display = "none";
-    document.getElementById("question-screen").style.display = "block";
+    const nameInput = document.getElementById("name-input").value;
+    const errorMessage = document.getElementById("error-message");
+    if (nameInput.length >= 2 && nameInput.length <= 12) {
+        userName = nameInput;
+        document.getElementById("starting-screen").style.display = "none";
+        document.getElementById("question-screen").style.display = "block";
+        errorMessage.style.display = "none";
+    } else {
+        errorMessage.style.display = "block";
+    }
 }
 
 
@@ -360,7 +370,7 @@ finishButton.addEventListener("mouseout", function () {
 function displayResults() {
     let resultModal = new bootstrap.Modal(document.getElementById("resultModal"));
     let modalContent = document.getElementById("player-result");
-    modalContent.textContent = `You scored ${playerScore} out of 10.`;
+    modalContent.textContent = `${userName}, you scored ${playerScore} out of 10.`;
 
     // Different messages to appear depending on score
     let scoreMessage = document.getElementById("score-message");
@@ -420,6 +430,7 @@ function displayResults() {
 /*------------------------------Restart Game-----------------------------*/
 function restartGame() {
     // Reset all scores and variables
+    userName = "";
     usedQuestions = [];
     playerScore = 0;
 
