@@ -264,6 +264,13 @@ The W3C Markup Validator and W3C CSS Validator services were used to validate ev
 ![CSS validation result](/assets/img/sw-quiz-css-validator-results.png)
 </details>
 
+<details>
+<summary>style.css
+</summary>
+
+![JavaScript validation result](/assets/img/sw-quiz-jshint-test.png)
+</details>
+
 ### Manual Testing
 
 * The website was tested on Google Chrome & Microsoft Edge.
