@@ -6,9 +6,9 @@ Narth Vaders Question Raiders | Star Wars Edition is an online quiz game built t
 
 Anybody can access it and play the quiz game to test themselves. This can be done via desktop, tablet or mobile as the game is responsive. 
 
-All users will go throught 10 randoim questions picked from and object array of 21 questions and recieve a score out of 10 at the end with a message depending on what score they got.
+All users will go throught 10 random questions picked from and object array of 21 questions and recieve a score out of 10 at the end with a message depending on what the user scored.
 
-![Hunter Kitchen Design](/assets/img/star-wars-quiz-game-start-screen.png)
+![Narth Vaders Question Raiders | Star Wars Edition](/assets/img/star-wars-quiz-game-start-screen.png)
  
 [View Narth Vaders Question Raiders | Star Wars Edition project here](https://github.com/DarthKoder/Star-Wars-Question-Raider)
 - - -
@@ -41,9 +41,11 @@ All users will go throught 10 randoim questions picked from and object array of 
 
 This website is designed to provide users enjoyment whilst seamlessly testing their Star Wars knowledge using a fun 10 question quiz game to do so.
 
-The aim is to cater to all fans of the genre, weather they are die hard fans or just dabbling in the genre the game is here to not only test but help people learn more about Star Wars. It is intuitive and informative at the same time.
+The aim is to cater to all fans of the genre, whether they are die hard fans or just dabbling in it. The game is here to not only test, but help people learn more about Star Wars and is also intuitive and informative at the same time.
 
-There is clear and simple intuitive buttons as guidance to help the user along their way, such as "Begin The Trials" start button, multiple choice questions to pick from and also "Next" & "Finish" buttons for the game. The results modal has the "Close" & "Play Again" buttons also. 
+There is clear and simple intuitive buttons as guidance to help the user along their way, such as a "Begin The Trials" start button, multiple choice questions to pick from and also "Next" & "Finish" buttons for the game. The results modal has the "Close" & "Play Again" buttons also. 
+
+The user must input their name to begn the game which is then used in the result screen to create a more personal experience.
 
 To help inspire the user and bring them into the Star Wars universe for their experience, I have used familiar colours and fonts as well as an animated space background to help make the user feel immersed and really connect with the Star Wars theme. 
 
@@ -73,22 +75,24 @@ To help inspire the user and bring them into the Star Wars universe for their ex
 
 * This website is targeting people who interested in Star Wars.
 * The user can enjoy the Star Wars aesthetic whist testing their knowledge with a 10 question quiz game.
-* They can use the intuitive design to navigate through the game with ease, weather on a mobile,tablet or desktop computer.
-* It has responsive logic to higlight correct and incorrect questions to help the use know if they are correct or to learn where they went wrong.
+* They can use the intuitive design to navigate through the game with ease, whether on a mobile, tablet or desktop computer.
+* It has responsive logic to higlight correct and incorrect questions to help the user know if they are correct or to learn where they went wrong.
 
 ### Existing Features
 
 * Game Title
-    * This is the game title and series edition to show what the game is about and can be seen as constant throught the game and series (if any future game editions are to be made)
-    * I have use the famouse Star Wars colours for this such as the Star Wars yellow #ffbf50 & sith red #a80000, which is also the logos/series main colour.
+    * This is the game title and series edition to show what the game is about and can be seen as constant throught the game and series (if any future game editions are to be made).
+    * I have used the famous Star Wars colours for this such as the Star Wars yellow #ffbf50 & sith red #a80000, which is also the logos/series main colour.
 
     ![Game Title](assets/img/sw-quiz-title.png)
 
 * Starting Screen
     * It is the opening screen to the game.
-    * This has the game title and series edition to show what the game is about (this is the same throughout all screens)
+    * This has the game title and series edition to show what the game is about (this is the same throughout all screens).
     * It uses familliar fonts such as the "Star Wars" font and then "Orbitron", "Teko" & "Jersey 10" to give it more of a Star Wars feel and space like immersion.
-    * It contains a reactive button to allow easy navigation to start the game with an enticing prompt of "Begin The Trials" which is to be clicked to start the game. This button also has a hover effect to let the user know the button can be activated.
+    * This has a name input fiel with a min/max charcter requirement that must be filled out in able to start the game.
+    * The name input will be called in the results screen to bring a personalised experience for the user.
+    * It contains a reactive button to allow easy navigation to start the game, with an enticing prompt of "Begin The Trials", which is to be clicked to start the game. This button also has a hover effect to let the user know the button can be activated.
     * I have used colours associated with Star Wars such as sith red #a80000, the famous Star Wars yellow #ffbf50, Jedi green, Jedi blue #2b5a99 along with a contrasting pale, light #fafafa, all on the space style black #000000. These colours are to help make the user feel immersed and really connect with the Star Wars theme. 
 
     ![Starting Screen](assets/img/star-wars-quiz-game-start-screen.png)
@@ -103,7 +107,7 @@ To help inspire the user and bring them into the Star Wars universe for their ex
 
     * The questions that appear will be randomised and shall not repeat any question in one game. 
     * Depending on the users answer/input, the question choice clicked will highlight green if correct and red if incorrect. If incorrect the correct answer will also highlight green to help the user understand where they went wrong. 
-    * Once an answer/input has been given, the question buttons will be disable to stop the user from changing their answers.
+    * Once an answer/input has been given, the question buttons will be disabled to stop the user from changing their answers.
     * The question is using the "Star Wars" font in the Jedi blue colour.
     * The multiple choice questions each appear in an oblong box with a white background with black "Orbitron" font and a Star Wars yellow border.
     * The question buttons are also reactive and the background turns yellow when hovered over.
@@ -114,8 +118,8 @@ To help inspire the user and bring them into the Star Wars universe for their ex
 
     ![Question Screen Incorrect](assets/img/sw-quiz-incorrect-question.png)
 
-    * If the question number is below 10, the answer/input has been given and the answer has been chacked and highlighted correct or incorrect, a "Next" button will appear to move forward to the next question.
-    * If the question number is at 10, the answer/input has been given and the answer has been chacked and highlighted correct or incorrect, a "Finish" button will appear to end the game and bring up the results modal.
+    * If the question number is below 10, the answer/input has been given and the answer has been checked and highlighted correct or incorrect, a "Next" button will appear to move forward to the next question.
+    * If the question number is at 10, the answer/input has been given and the answer has been checked and highlighted correct or incorrect, a "Finish" button will appear to end the game and bring up the results modal.
     * These buttons will also be reactive and change the background colour when hovered over.
 
     ![Question Screen Next Button Hover](assets/img/sw-quiz-next-btn.png)
@@ -137,11 +141,11 @@ To help inspire the user and bring them into the Star Wars universe for their ex
        - This has a light #fafafa background 
        - The results score text is large and red #a80000 to stand out
        - The message text is black of colour
-       - The "Would you like to play gain?" text is in jedi green
-       - I have made these different colours to stand out and make it clear that they are different sections of the body
+       - The "Would you like to play again?" text is in jedi green.
+       - I have made these different colours to stand out and make it clear that they are different sections of the body.
     * The footer contains two buttons, one to close the modal and the other to play again and take the user back to the starting screen. 
-       - Both buttons have the original button layout with black background and withe text with a red border.
-       - The close button when hovered over has the background turn red like the othger buttons in the game.
+       - Both buttons have the original button layout with black background and white text with a red border.
+       - The close button when hovered over has the background turn red like the other buttons in the game.
        The play again button when hovered over, turns green to help signify the green light to play again. 
     * The results modal is designed to give a rewarding feel with a personal message to the player and also give the determionation to get better.
     * It is intuitive and informative at the same time.
@@ -181,7 +185,7 @@ To help inspire the user and bring them into the Star Wars universe for their ex
 * One issue I came across was that the "Next" button was not working when pressed. 
    - After rigorous testing and trial and error, I realised that I have the button disabled and had to enable it by editing code and moving the diplayNextQuestion function to the top. 
 
-* Another bug I had was that, while testing, I found that when i was going through the questions and it was surpassing the 10 question limit and had not end. 
+* Another bug I had was that, while testing, I found that when I was going through the questions and it was surpassing the 10 question limit and had not end. 
    - This was due having the code wrong for hiding the "Next" button and displaying the "Finish" button, which in turn,  never made it possible to end the game and bring up the results screen. 
 
 * The biggest issue I had after testing the game cycle and finish button appearing, was that the game was only displaying 4 questions before initializing the "Finish" button. 
@@ -268,7 +272,7 @@ The W3C Markup Validator and W3C CSS Validator services were used to validate ev
 <summary>style.css
 </summary>
 
-![JavaScript validation result](/assets/img/sw-quiz-jshint-test.png)
+![JavaScript validation result](/assets/img/)
 </details>
 
 ### Manual Testing
@@ -358,7 +362,7 @@ By forking the repository, we make a copy of the original repository on our GitH
 ### Content
 
  * All content was written by the developer.
- * [Color contrast checker](https://coolors.co/contrast-checker/112a46-acc8e5) was used to decide which colors would be used for the website.
+ * [Color contrast checker](https://coolors.co/contrast-checker/112a46-acc8e5) was used to decide which colours would be used for the website.
 
 ### Media 
 
@@ -370,4 +374,4 @@ By forking the repository, we make a copy of the original repository on our GitH
  * My mentor Mitko for helping me with ideas for the game and ways to build it. 
  * W3schools for the information online needed to help me build this game. 
  * Slack community for encouragement and information.
- * My motivation for this project was my parter, who is currently an up and coming Kitchen Designer and helped me with some of the information presented on the site; along with the image of her.I wanted to create this site for her and her future career.
+ * My motivation for this project was my love for Star Wars and wanted to build something for the community. 
