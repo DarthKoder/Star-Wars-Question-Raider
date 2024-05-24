@@ -154,7 +154,7 @@ To help inspire the user and bring them into the Star Wars universe for their ex
 
 ![Results Screen Close Hover](assets//img/sw-quiz-result-modal-close-hover.png)
 
-![Results Screen Play Again Hover](assets/img/sw-quiz-result-modal-play-again-hover.png )
+![Results Screen Play Again Hover](assets/img/sw-quiz-result-modal-play-again-hover.png)
 
 ---
 
@@ -251,6 +251,7 @@ The W3C Markup Validator and W3C CSS Validator services were used to validate ev
  * [W3C Markup Validtor](https://validator.w3.org/)
  * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
  * [JS Lint](https://www.jslint.com/)
+ * [JS Hint](https://www.jshint.com/)
 
 ### Validation results
 
