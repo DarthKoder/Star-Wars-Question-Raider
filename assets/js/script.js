@@ -303,12 +303,12 @@ function displayNextQuestion() {
                 document.getElementById("finish-btn").style.display = "block";
             }
         });
-    };
-};
+    }
+}
 // Toggling the answer buttons (generic function)
 function toggleAnswerButtons(answerButtons, disabled) {
     for (let button of answerButtons) {
-        button.disabled = disabled
+        button.disabled = disabled;
     }
 }
 
@@ -320,7 +320,7 @@ function checkAnswer(userAnswer, correctAnswer) {
         document.querySelector(`button[data-answer="${userAnswer}"]`).style.backgroundColor = "red";
         document.querySelector(`button[data-answer="${correctAnswer}"]`).style.backgroundColor = "green";
     }
-};
+}
 
 /*------------------------------Next Button-----------------------------*/
 // This is to enabnle the button again and produce the next question once the button is clicked
@@ -348,7 +348,7 @@ nextButton.addEventListener("mouseout", function () {
 /*------------------------------Finish Button-----------------------------*/
 
 document.getElementById("finish-btn").addEventListener("click", function () {
-    displayResults()
+    displayResults();
 });
 
 const finishButton = document.querySelector("#finish-btn");
@@ -375,13 +375,13 @@ function displayResults() {
     // Different messages to appear depending on score
     let scoreMessage = document.getElementById("score-message");
     if (playerScore <= 3) {
-        scoreMessage.textContent = `One with the force, you are not. A lot to learn, you have`
+        scoreMessage.textContent = `One with the force, you are not. A lot to learn, you have`;
     }
     else if (playerScore >= 4 && playerScore <= 7) {
-        scoreMessage.textContent = `Not bad.. not great. Your path, you must decide.`
+        scoreMessage.textContent = `Not bad.. not great. Your path, you must decide.`;
     }
     else {
-        scoreMessage.textContent = `Powerful you have become! Always pass on what you have learned, you Jedi! `
+        scoreMessage.textContent = `Powerful you have become! Always pass on what you have learned, you Jedi! `;
     }
     resultModal.style.display = "block";
 
@@ -426,7 +426,7 @@ function displayResults() {
         // Change the play again button's background color back to its original color
         playAgainButton.style.backgroundColor = "";
     });
-};
+}
 /*------------------------------Restart Game-----------------------------*/
 function restartGame() {
     // Reset all scores and variables
@@ -452,9 +452,9 @@ function restartGame() {
     let resultModal = document.getElementById("resultModal");
     if (resultModal) {
         resultModal.style.display = "none";
-    };
+    }
 
     // Restart the game by displaying the starting screen and hiding the question screen
     document.getElementById("question-screen").style.display = "none";
     document.getElementById("starting-screen").style.display = "block";
-};
+}

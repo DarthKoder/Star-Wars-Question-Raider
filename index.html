@@ -34,7 +34,8 @@
 
     <div class="container start-screen" id="starting-screen">
         <label for="name-input" id="name-label">Name</label>
-        <input class="input-name" id="name-input" minlength="2" maxlength="12" placeholder="(2-12 characters long)" required></input>
+        <input class="input-name" id="name-input" minlength="2" maxlength="12" placeholder="(2-12 characters long)"
+            required>
         <p id="error-message" style="color: red; display: none;">Name must be between 2 and 12 characters.</p>
         <h2 id="start-title">Test Your Star Wars Knowledge</h2>
         <p id="start-text">
@@ -60,7 +61,7 @@
 
     <div class="container results" id="result-panel">
         <!-- Button trigger modal -->
-        <button type="button" class="btn-finish" id="finish-btn">
+        <button type="button" class="btn btn-primary btn-finish" id="finish-btn">
             Finish
         </button>
 
@@ -72,19 +73,20 @@
                         <h1 class="modal-title" id="modal-heading">Completed The Questions, You Have!</h1>
                     </div>
                     <div class="modal-body">
-                        <h2 id="player-result"><span id="score"></span></h2>
+                        <h2 id="player-result">Your Score<span id="score"></span></h2>
                         <p id="score-message"></p>
                         <br>
                         <p id="play-again-text">Would you like to play again?</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="close-btn" id="close-modal" onclick="closeModal()">Close</button>
-                        <button type="button" class="play-again-btn" id="play-again-btn" onclick="playAgain()">Play Again</button>
+                        <button type="button" class="btn btn-secondary close-btn" id="close-modal"
+                            onclick="closeModal()">Close</button>
+                        <button type="button" class="btn btn-primary play-again-btn" id="play-again-btn"
+                            onclick="playAgain()">Play Again</button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <script src="./assets/js/script.js"></script>
 </body>
