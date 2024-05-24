@@ -162,12 +162,7 @@ body {
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
 }
 
-.modal-dialog {
-    position: relative;
-    margin: 10% auto;
-    width: 50%;
-    max-width: 600px;
-    background-color: #fff;
+.modal-content {
     border: 2px solid #ffbf50;
     border-radius: 10px;
 }
@@ -204,7 +199,6 @@ body {
 
 :root {
     --bs-body-bg: #000;
-    
 }
 
 #modal-heading {
