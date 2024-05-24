@@ -307,7 +307,7 @@ function displayNextQuestion() {
 };
 // Toggling the answer buttons (generic function)
 function toggleAnswerButtons(answerButtons, disabled) {
-    for ( let button of answerButtons) {
+    for (let button of answerButtons) {
         button.disabled = disabled
     }
 }
@@ -326,7 +326,7 @@ function checkAnswer(userAnswer, correctAnswer) {
 // This is to enabnle the button again and produce the next question once the button is clicked
 document.getElementById("next-btn").addEventListener("click", function () {
     displayNextQuestion();
-    toggleAnswerButtons(document.getElementsByClassName("question-option"),false);
+    toggleAnswerButtons(document.getElementsByClassName("question-option"), false);
     // To hide the button after displaying next question
     document.getElementById("next-btn").style.display = "none";
 });
@@ -368,7 +368,7 @@ finishButton.addEventListener("mouseout", function () {
 /*------------------------------Results Screen-----------------------------*/
 // Bring up bootstrap modal and display users results
 function displayResults() {
-    let resultModal = new bootstrap.Modal(document.getElementById("resultModal"));
+    let resultModal = document.getElementById("resultModal");
     let modalContent = document.getElementById("player-result");
     modalContent.textContent = `${userName}, you scored ${playerScore} out of 10.`;
 
@@ -383,7 +383,7 @@ function displayResults() {
     else {
         scoreMessage.textContent = `Powerful you have become! Always pass on what you have learned, you Jedi! `
     }
-    resultModal.show();
+    resultModal.style.display = "block";
 
     /*-----------------------Close Button---------------------*/
     // Close button will close down the modal screen
@@ -394,13 +394,13 @@ function displayResults() {
     const closeButton = document.querySelector("#close-modal");
 
     // Add a mouseover listener to close button
-    closeButton.addEventListener("mouseover", function() {
+    closeButton.addEventListener("mouseover", function () {
         // Change the close button's background color
         closeButton.style.backgroundColor = "#a80000";
     });
 
     // Add a mouseout event listener to close button to reverse css change
-    closeButton.addEventListener("mouseout", function() {
+    closeButton.addEventListener("mouseout", function () {
         // Change the close button's background color back to its original color
         closeButton.style.backgroundColor = "";
     });
@@ -432,6 +432,7 @@ function restartGame() {
     // Reset all scores and variables
     usedQuestions = [];
     playerScore = 0;
+    userName = "";
 
     // Reset answer button styles
     let answerButtons = document.getElementsByClassName("question-option");
@@ -441,17 +442,17 @@ function restartGame() {
     }
 
     // Enable answer buttons for the next game
-    toggleAnswerButtons(answerButtons,false);
+    toggleAnswerButtons(answerButtons, false);
 
     // This is to hide finish button and next button
     document.getElementById("finish-btn").style.display = "none";
     document.getElementById("next-btn").style.display = "none";
 
     // This is to ensure the modal is hidden
-    let resultModal = bootstrap.Modal.getInstance(document.getElementById("resultModal"));
+    let resultModal = document.getElementById("resultModal");
     if (resultModal) {
-        resultModal.hide();
-    }
+        resultModal.style.display = "none";
+    };
 
     // Restart the game by displaying the starting screen and hiding the question screen
     document.getElementById("question-screen").style.display = "none";
